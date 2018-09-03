@@ -1,0 +1,80 @@
+@import '../../styles.scss';
+
+.about-side {
+  background-color: $grey;
+  color: $light-grey;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 100vh;
+  text-align: center;
+  position: relative;
+
+  .social {
+    font-size: 16px;
+    position: absolute;
+    top: 0;
+    padding: 10px 0;
+    margin: 0 50px;
+    z-index: 2;
+
+    a {
+      color: $light-grey;
+      text-decoration: none;
+
+      &:hover {
+        color: $orange;
+      }
+    }
+  }
+
+  .intro {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+
+    .photo {
+      width: 350px;
+      border: 5px solid $orange;
+      border-radius: 100%;
+    }
+
+    .name {
+      font-size: 28px;
+      font-weight: 700;
+      color: $orange;
+      padding: 15px 0 0;
+    }
+    
+    .name::before {
+      height: 2px;
+      background-color: $light-grey;
+    }
+  }
+
+  .info {
+    font-size: 13px;
+    position: absolute;
+    bottom: 0;
+    padding: 10px 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    width: calc(100% - 100px);
+    margin: 0 50px;
+    z-index: 2;
+
+    a, .item {
+      color: $light-grey;
+      text-decoration: none;
+
+      &:hover {
+        color: $orange;
+      }
+    }
+
+    .fa {
+      padding-right: 5px;
+    }
+  }
+}
