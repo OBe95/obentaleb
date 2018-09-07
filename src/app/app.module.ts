@@ -5,11 +5,13 @@ import { AppComponent } from './app.component';
 import { AboutSideComponent } from './about-side/about-side.component';
 
 import { ParticlesModule } from 'angular-particle';
+import { FormationComponent } from './formation/formation.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    AboutSideComponent
+    AboutSideComponent,
+    FormationComponent
   ],
   imports: [
     BrowserModule,

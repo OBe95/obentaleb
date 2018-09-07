@@ -16,13 +16,13 @@ export class AboutSideComponent implements OnInit {
     this.style = {
       'position': 'absolute',
       'width': '100%',
-      'height': '100%',
+      'height': '98%',
       'z-index': 1,
       'top': 0,
       'left': 0,
       'right': 0,
       'bottom': 0,
-      'opacity': 0.6,
+      'opacity': 0.4,
     };
 
     this.params = {
@@ -31,7 +31,7 @@ export class AboutSideComponent implements OnInit {
           value: 150,
         },
         color: {
-          value: '#ff9900'
+          value: '#D9B310'
         },
         shape: {
           type: 'polygon',

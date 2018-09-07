@@ -1,8 +1,8 @@
 @import '../../styles.scss';
 
 .about-side {
-  background-color: $grey;
-  color: $light-grey;
+  background-color: $bg;
+  color: $bg-font;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -19,11 +19,11 @@
     z-index: 2;
 
     a {
-      color: $light-grey;
+      color: $bg-font;
       text-decoration: none;
 
       &:hover {
-        color: $orange;
+        color: $secondary;
       }
     }
   }
@@ -37,20 +37,20 @@
 
     .photo {
       width: 350px;
-      border: 5px solid $orange;
+      border: 5px solid $secondary;
       border-radius: 100%;
     }
 
     .name {
       font-size: 28px;
       font-weight: 700;
-      color: $orange;
+      color: $secondary;
       padding: 15px 0 0;
     }
     
     .name::before {
       height: 2px;
-      background-color: $light-grey;
+      background-color: $bg-font;
     }
   }
 
@@ -63,13 +63,21 @@
     width: calc(100% - 100px);
     margin: 0 50px;
     z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .item {
+      display: flex;
+      flex-direction: column;
+    }
 
     a, .item {
-      color: $light-grey;
+      color: $bg-font;
       text-decoration: none;
 
       &:hover {
-        color: $orange;
+        color: $secondary;
       }
     }
 

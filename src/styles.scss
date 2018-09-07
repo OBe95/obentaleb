@@ -2,10 +2,20 @@
 @import "~bootstrap/dist/css/bootstrap.css";
 @import "~font-awesome/css/font-awesome.css";
 
-$grey: #333;
-$orange: #ff9900;
-$blue: #3399cc;
-$light-grey: #eee;
+$bg: #1D2731;
+$primary: #0B3C5D;
+$secondary: #D9B310;
+$primary-light: #328CC1;
+$bg-font: #EEEEEE;
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px
+);
+
 @font-face {
     font-family: 'poppins';
     src: url('/src/assets/fonts/poppins-regular.ttf') format('truetype');
@@ -19,4 +29,5 @@ body {
     line-height: 30px;
     font-family: "poppins", sans-serif;
     letter-spacing: 0px;
+    background-color: $bg-font;
 }
