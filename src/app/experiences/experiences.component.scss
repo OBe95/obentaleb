@@ -1,0 +1,84 @@
+@import '../../styles.scss';
+
+.experiences {
+  margin: 50px 0 30px;
+
+  .title {
+    background-color: $bg;
+    color: $secondary;
+    font-size: 18px;
+    text-transform: uppercase;
+    display: inline-block;
+    position: relative;
+    padding: 5px 30px 5px 60px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    margin-bottom: 15px;
+
+    &:before {
+      content:"";
+      height: 100%;
+      width: 5px;
+      background-color: $secondary;
+      left: 15px;  
+      top: 0;
+      position: absolute;
+      border-right: 1px solid $bg-font;
+    }
+  }
+
+  .experience {
+    margin: 0 30px 20px;
+    position: relative;
+
+    .experience-date {
+      background-color: $secondary;
+      color: $bg;
+      padding: 0 10px;
+      border-left: 3px solid $bg;
+      display: inline-block;
+    }
+
+    .experience-content {
+      padding: 10px;
+
+      .experience-title {
+        color: $bg;
+        font-weight: 600;
+
+        i {
+          padding-right: 5px;
+        }
+      }
+
+      .details {
+        color: $primary;
+
+        i {
+          padding-right: 5px;
+        }
+
+        .more {
+          padding-left: 5px;
+          cursor: pointer;
+        }
+      }
+
+      .more-details {
+        font-size: 13px;
+        background-color: transparentize($primary, 0.8);
+        text-align: justify;
+        border-radius: 10px;
+        padding: 10px 20px;
+        margin-bottom: 10px;
+      }
+
+      .technologies {
+        font-size: 12px;
+        font-style: italic;
+        text-decoration: underline;
+        line-height: 18px;
+      }
+    }
+  }
+}
