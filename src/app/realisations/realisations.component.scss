@@ -32,11 +32,22 @@
     position: relative;
 
     .realisation-date {
-      background-color: transparentize($primary-light, 0.5);
+      height: 26px;
+      background-color: $secondary;
       color: $bg;
       padding: 0 10px;
       border-left: 3px solid $bg;
       display: inline-block;
+      position: relative;
+
+      &:before {
+        content: "";
+        border-top: 13px solid transparent;
+        border-bottom: 13px solid transparent;
+        border-left: 13px solid $secondary;
+        position: absolute;
+        right: -13px;
+      }
     }
 
     .realisation-content {

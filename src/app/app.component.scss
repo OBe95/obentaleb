@@ -1,13 +1,11 @@
 @import '../styles.scss';
 
-.scrollable {
-  height: 100vh;
-  overflow: auto;
+.md-fixed {
+  position: fixed;
 }
 
 @media (max-width: map-get($grid-breakpoints, md)) {
-  .scrollable {
-    height: 100%;
-    overflow: unset;
+  .md-fixed {
+    position: relative;
   }
 }

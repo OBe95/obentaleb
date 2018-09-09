@@ -27,11 +27,11 @@
       <div class="experience-title"><i class="fa fa-star" aria-hidden="true"></i>Ingénieur Développement - Nimble Ways</div>
       <div class="details"><i class="fa fa-check-circle" aria-hidden="true"></i>Réalisation d’un moteur de recherche pour
         le compte d’une banque<i class="fa fa-ellipsis-h more" aria-hidden="true" (click)="toggleMoreDetails('nimbleways')"></i></div>
-      <div class="more-details" *ngIf="moreDetails.nimbleways">La solution récupère, traite et analyse régulièrement le contenu
-        des sources (contenu HTML, PDF, WORD, EXCEL...), le met intelligemment (en appliquant des synonymes et des stop words…)
-        à la disposition des utilisateurs. Elle récupère aussi, en tache de fond, des statistiques de son utilisation (clicks
-        sur les résultats, votes…) qui sont traitées par le micro-service Machine Learning afin d’améliorer le classement
-        des résultats.</div>
+      <div class="more-details" *ngIf="moreDetails.nimbleways" [@detailsState]>La solution récupère, traite et analyse régulièrement
+        le contenu des sources (contenu HTML, PDF, WORD, EXCEL...), le met intelligemment (en appliquant des synonymes et
+        des stop words…) à la disposition des utilisateurs. Elle récupère aussi, en tache de fond, des statistiques de son
+        utilisation (clicks sur les résultats, votes…) qui sont traitées par le micro-service Machine Learning afin d’améliorer
+        le classement des résultats.</div>
       <div class="technologies">Angular, Angular Material, NodeJS, Express, Java, Solr, Python, Scrapy, Splash, Klein, MongoDB,
         Machine learning, Docker</div>
     </div>
@@ -44,10 +44,10 @@
       <div class="details"><i class="fa fa-check-circle" aria-hidden="true"></i>Participation au développement des solutions
         «Control Tower»<i class="fa fa-ellipsis-h more" aria-hidden="true" (click)="toggleMoreDetails('adias')"></i>
       </div>
-      <div class="more-details" *ngIf="moreDetails.adias">Il s’agit d’une solution web dont l’objectif est de permettre aux
-        clients d’une société leader de transit et de transport au Maroc de faire le suivi, à la demande et en temps réel,
-        de leurs dossiers de transit et d’évaluer la qualité de service qu’elle leur offre, tout en permettant aux managers
-        et décideurs de la société d’évaluer la performance de leurs collaborateurs et services.</div>
+      <div class="more-details" *ngIf="moreDetails.adias" [@detailsState]>Il s’agit d’une solution web dont l’objectif est
+        de permettre aux clients d’une société leader de transit et de transport au Maroc de faire le suivi, à la demande
+        et en temps réel, de leurs dossiers de transit et d’évaluer la qualité de service qu’elle leur offre, tout en permettant
+        aux managers et décideurs de la société d’évaluer la performance de leurs collaborateurs et services.</div>
       <div class="technologies">JEE, Spring MVC, Spring Security, HTML/CSS, jQuery/Javascript, Bootstrap, Highcharts</div>
     </div>
   </div>
@@ -59,10 +59,11 @@
       <div class="details"><i class="fa fa-check-circle" aria-hidden="true"></i>Conception et réalisation d'un progiciel
         pour le secteur du BTP<i class="fa fa-ellipsis-h more" aria-hidden="true" (click)="toggleMoreDetails('optimaco')"></i>
       </div>
-      <div class="more-details" *ngIf="moreDetails.optimaco">La solution permet de mutualiser l'ensemble des systèmes d'informations
-        et des processus opérationnels liés au secteur du BTP et plus particulièrement les spécificités des projets d’OPTIMACO
-        : Pointage journalier de l’activité du chantier; Réalisation d’un contrôle de gestion automatique des différentes
-        tâches du projet; Etablissement des situations des sous‐traitants et de leur facturation; Gestion du matériel/matériaux.</div>
+      <div class="more-details" *ngIf="moreDetails.optimaco" [@detailsState]>La solution permet de mutualiser l'ensemble
+        des systèmes d'informations et des processus opérationnels liés au secteur du BTP et plus particulièrement les spécificités
+        des projets d’OPTIMACO : Pointage journalier de l’activité du chantier; Réalisation d’un contrôle de gestion automatique
+        des différentes tâches du projet; Etablissement des situations des sous‐traitants et de leur facturation; Gestion
+        du matériel/matériaux.</div>
       <div class="technologies">SQL Server 2012, Hibernate, Spring MVC, JEE</div>
     </div>
   </div>
