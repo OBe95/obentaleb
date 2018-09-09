@@ -26,7 +26,8 @@
     <div class="experience-content">
       <div class="experience-title"><i class="fa fa-star" aria-hidden="true"></i>Ingénieur Développement - Nimble Ways</div>
       <div class="details"><i class="fa fa-check-circle" aria-hidden="true"></i>Réalisation d’un moteur de recherche pour
-        le compte d’une banque<i class="fa fa-ellipsis-h more" aria-hidden="true" (click)="toggleMoreDetails('nimbleways')"></i></div>
+        le compte d’une banque<i [ngClass]="moreDetails.nimbleways ? 'fa-caret-up':'fa-caret-down'" class="fa more" aria-hidden="true"
+          (click)="toggleMoreDetails('nimbleways')"></i></div>
       <div class="more-details" *ngIf="moreDetails.nimbleways" [@detailsState]>La solution récupère, traite et analyse régulièrement
         le contenu des sources (contenu HTML, PDF, WORD, EXCEL...), le met intelligemment (en appliquant des synonymes et
         des stop words…) à la disposition des utilisateurs. Elle récupère aussi, en tache de fond, des statistiques de son
@@ -42,7 +43,8 @@
     <div class="experience-content">
       <div class="experience-title"><i class="fa fa-star" aria-hidden="true"></i>Stage - Projet de fin d'études - ADIAS</div>
       <div class="details"><i class="fa fa-check-circle" aria-hidden="true"></i>Participation au développement des solutions
-        «Control Tower»<i class="fa fa-ellipsis-h more" aria-hidden="true" (click)="toggleMoreDetails('adias')"></i>
+        «Control Tower»<i [ngClass]="moreDetails.adias ? 'fa-caret-up':'fa-caret-down'" class="fa more" aria-hidden="true"
+          (click)="toggleMoreDetails('adias')"></i>
       </div>
       <div class="more-details" *ngIf="moreDetails.adias" [@detailsState]>Il s’agit d’une solution web dont l’objectif est
         de permettre aux clients d’une société leader de transit et de transport au Maroc de faire le suivi, à la demande
@@ -57,7 +59,8 @@
     <div class="experience-content">
       <div class="experience-title"><i class="fa fa-star" aria-hidden="true"></i>Stage d'ingénieur - OPTIMACO</div>
       <div class="details"><i class="fa fa-check-circle" aria-hidden="true"></i>Conception et réalisation d'un progiciel
-        pour le secteur du BTP<i class="fa fa-ellipsis-h more" aria-hidden="true" (click)="toggleMoreDetails('optimaco')"></i>
+        pour le secteur du BTP<i [ngClass]="moreDetails.optimaco ? 'fa-caret-up':'fa-caret-down'" class="fa more" aria-hidden="true"
+          (click)="toggleMoreDetails('optimaco')"></i>
       </div>
       <div class="more-details" *ngIf="moreDetails.optimaco" [@detailsState]>La solution permet de mutualiser l'ensemble
         des systèmes d'informations et des processus opérationnels liés au secteur du BTP et plus particulièrement les spécificités

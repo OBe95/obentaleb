@@ -7,7 +7,8 @@
       <div class="realisation-title">
         <i class="fa fa-star" aria-hidden="true"></i>Réalisation d’une application web progressive</div>
       <div class="details"><i class="fa fa-flask" aria-hidden="true"></i>EHTP Network - Un annuaire des étudiants / lauréats
-        de l'EHTP<i class="fa fa-ellipsis-h more" aria-hidden="true" (click)="toggleMoreDetails('ehtpnetwork')"></i></div>
+        de l'EHTP<i [ngClass]="moreDetails.ehtpnetwork ? 'fa-caret-up':'fa-caret-down'" class="fa more" aria-hidden="true"
+          (click)="toggleMoreDetails('ehtpnetwork')"></i></div>
       <div class="more-details" *ngIf="moreDetails.ehtpnetwork" [@detailsState]>L'application permet un accès rapide, même
         hors ligne, aux profils actualisés des étudiants / lauréats de l'EHTP, après inscription, une notification est envoyée
         aux différents membres de sa promotion pour la validation du compte, une fois le compte atteint le nombre minimal
@@ -50,8 +51,8 @@
       <div class="realisation-title">
         <i class="fa fa-star" aria-hidden="true"></i>Projet de développement - GFI</div>
       <div class="details"><i class="fa fa-graduation-cap" aria-hidden="true"></i>Réalisation d'une passerelle entre JIRA
-        et Redmine
-        <i class="fa fa-ellipsis-h more" aria-hidden="true" (click)="toggleMoreDetails('jiragateway')"></i></div>
+        et Redmine<i [ngClass]="moreDetails.jiragateway ? 'fa-caret-up':'fa-caret-down'" class="fa more" aria-hidden="true"
+          (click)="toggleMoreDetails('jiragateway')"></i></div>
       <div class="more-details" *ngIf="moreDetails.jiragateway" [@detailsState]>En analysant les emails issus à chaque création
         / mise à jour au niveau de l'un des outils de ticketing et en utilisant les API des deux outils, l'application assure
         la synchronisation et la compatibilité des tickets crées par les clients et l'avancement fait au niveau de la GFI
@@ -92,8 +93,8 @@
       <div class="realisation-title">
         <i class="fa fa-star" aria-hidden="true"></i>Projet Java-UML - CTM</div>
       <div class="details"><i class="fa fa-graduation-cap" aria-hidden="true"></i>Réalisation d'une application mobile pour
-        l'atelier de la maintenance
-        <i class="fa fa-ellipsis-h more" aria-hidden="true" (click)="toggleMoreDetails('smartgm')"></i></div>
+        l'atelier de la maintenance<i [ngClass]="moreDetails.smartgm ? 'fa-caret-up':'fa-caret-down'" class="fa more" aria-hidden="true"
+          (click)="toggleMoreDetails('smartgm')"></i></div>
       <div class="more-details" *ngIf="moreDetails.smartgm" [@detailsState]>Le projet consiste à la numérisation de la fiche
         suiveuse des autocars utilisée au sein de l'atelier de la maintenance de la CTM pour suivre l'avancement de la maintenance
         de chacun des autocars.
