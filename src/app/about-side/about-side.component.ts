@@ -1,4 +1,5 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { TranslateService } from '../services/translate.service';
 
 @Component({
   selector: 'obe-about-side',
@@ -11,7 +12,8 @@ export class AboutSideComponent implements OnInit {
   params: object = {};
   width: number = 100;
   height: number = 100;
-  constructor() { }
+
+  constructor(private translator: TranslateService) { }
 
   ngOnInit() {
     this.style = {
@@ -39,6 +41,10 @@ export class AboutSideComponent implements OnInit {
         },
       }
     };
+  }
+
+  switchLang(lang: string) {
+    this.translator.use(lang);
   }
 
 }

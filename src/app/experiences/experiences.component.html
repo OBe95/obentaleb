@@ -1,83 +1,88 @@
 <div class="experiences">
-  <div class="title">Expériences</div>
+  <div class="title">{{ 'experiences_title' | translate }}</div>
 
   <div class="experience">
-    <div class="experience-date">Juin 2018 - Présent</div>
+    <div class="experience-date">{{ 'experiences_saham_date' | translate }}</div>
     <div class="experience-content">
-      <div class="experience-title"><i class="fa fa-star" aria-hidden="true"></i>Développeur Full-Stack - Saham Assurance,
-        Digital Factory</div>
-      <div class="technologies">ReactJs, Redux, NodeJS, LoopBack, Vagrant, Ansible</div>
-    </div>
-  </div>
-
-  <div class="experience">
-    <div class="experience-date">Mars 2018 - Juin 2018</div>
-    <div class="experience-content">
-      <div class="experience-title"><i class="fa fa-star" aria-hidden="true"></i>Ingénieur d'Études et Développement - Maltem
-        Africa
+      <div class="experience-title"><i class="fa fa-star" aria-hidden="true"></i>{{ 'experiences_saham_title' | translate
+        }}
       </div>
-      <div class="details"><i class="fa fa-check-circle" aria-hidden="true"></i>Mission chez Saham Assurance (Digital Factory)</div>
-      <div class="technologies">ReactJs, Redux, NodeJS, LoopBack, Vagrant, Ansible</div>
+      <div class="technologies">{{ 'experiences_saham_technologies' | translate }}</div>
     </div>
   </div>
 
   <div class="experience">
-    <div class="experience-date">Août 2017 - Février 2018</div>
+    <div class="experience-date">{{ 'experiences_maltem_date' | translate }}</div>
     <div class="experience-content">
-      <div class="experience-title"><i class="fa fa-star" aria-hidden="true"></i>Ingénieur Développement - Nimble Ways</div>
-      <div class="details"><i class="fa fa-check-circle" aria-hidden="true"></i>Réalisation d’un moteur de recherche pour
-        le compte d’une banque<i [ngClass]="moreDetails.nimbleways ? 'fa-caret-up':'fa-caret-down'" class="fa more" aria-hidden="true"
-          (click)="toggleMoreDetails('nimbleways')"></i></div>
-      <div class="more-details" *ngIf="moreDetails.nimbleways" [@detailsState]>La solution récupère, traite et analyse régulièrement
-        le contenu des sources (contenu HTML, PDF, WORD, EXCEL...), le met intelligemment (en appliquant des synonymes et
-        des stop words…) à la disposition des utilisateurs. Elle récupère aussi, en tache de fond, des statistiques de son
-        utilisation (clicks sur les résultats, votes…) qui sont traitées par le micro-service Machine Learning afin d’améliorer
-        le classement des résultats.</div>
-      <div class="technologies">Angular, Angular Material, NodeJS, Express, Java, Solr, Python, Scrapy, Splash, Klein, MongoDB,
-        Machine learning, Docker</div>
-    </div>
-  </div>
-
-  <div class="experience">
-    <div class="experience-date">Février 2017 - Juillet 2017</div>
-    <div class="experience-content">
-      <div class="experience-title"><i class="fa fa-star" aria-hidden="true"></i>Stage - Projet de fin d'études - ADIAS</div>
-      <div class="details"><i class="fa fa-check-circle" aria-hidden="true"></i>Participation au développement des solutions
-        «Control Tower»<i [ngClass]="moreDetails.adias ? 'fa-caret-up':'fa-caret-down'" class="fa more" aria-hidden="true"
-          (click)="toggleMoreDetails('adias')"></i>
+      <div class="experience-title"><i class="fa fa-star" aria-hidden="true"></i>{{ 'experiences_maltem_title' | translate
+        }}
       </div>
-      <div class="more-details" *ngIf="moreDetails.adias" [@detailsState]>Il s’agit d’une solution web dont l’objectif est
-        de permettre aux clients d’une société leader de transit et de transport au Maroc de faire le suivi, à la demande
-        et en temps réel, de leurs dossiers de transit et d’évaluer la qualité de service qu’elle leur offre, tout en permettant
-        aux managers et décideurs de la société d’évaluer la performance de leurs collaborateurs et services.</div>
-      <div class="technologies">JEE, Spring MVC, Spring Security, HTML/CSS, jQuery/Javascript, Bootstrap, Highcharts</div>
-    </div>
-  </div>
-
-  <div class="experience">
-    <div class="experience-date">Juillet 2016 - Septembre 2016</div>
-    <div class="experience-content">
-      <div class="experience-title"><i class="fa fa-star" aria-hidden="true"></i>Stage d'ingénieur - OPTIMACO</div>
-      <div class="details"><i class="fa fa-check-circle" aria-hidden="true"></i>Conception et réalisation d'un progiciel
-        pour le secteur du BTP<i [ngClass]="moreDetails.optimaco ? 'fa-caret-up':'fa-caret-down'" class="fa more" aria-hidden="true"
-          (click)="toggleMoreDetails('optimaco')"></i>
+      <div class="details"><i class="fa fa-check-circle" aria-hidden="true"></i>{{ 'experiences_maltem_details' | translate
+        }}
       </div>
-      <div class="more-details" *ngIf="moreDetails.optimaco" [@detailsState]>La solution permet de mutualiser l'ensemble
-        des systèmes d'informations et des processus opérationnels liés au secteur du BTP et plus particulièrement les spécificités
-        des projets d’OPTIMACO : Pointage journalier de l’activité du chantier; Réalisation d’un contrôle de gestion automatique
-        des différentes tâches du projet; Etablissement des situations des sous‐traitants et de leur facturation; Gestion
-        du matériel/matériaux.</div>
-      <div class="technologies">SQL Server 2012, Hibernate, Spring MVC, JEE</div>
+      <div class="technologies">{{ 'experiences_maltem_technologies' | translate }}</div>
     </div>
   </div>
 
   <div class="experience">
-    <div class="experience-date">Août 2015</div>
+    <div class="experience-date">{{ 'experiences_nimbleways_date' | translate }}</div>
     <div class="experience-content">
-      <div class="experience-title"><i class="fa fa-star" aria-hidden="true"></i>Stage d'initiation professionnelle - TwinPrint</div>
-      <div class="details"><i class="fa fa-check-circle" aria-hidden="true"></i>Conceptions et réalisations graphiques, réalisation
-        du site web vitrine de TwinPrint</div>
-      <div class="technologies">Adobe Illustrator, Adobe Photoshop, HTML5, CSS3, JavaScript</div>
+      <div class="experience-title"><i class="fa fa-star" aria-hidden="true"></i>{{ 'experiences_nimbleways_title' | translate
+        }}
+      </div>
+      <div class="details"><i class="fa fa-check-circle" aria-hidden="true"></i>{{ 'experiences_nimbleways_details' | translate
+        }}
+        <i [ngClass]="moreDetails.nimbleways ? 'fa-caret-up':'fa-caret-down'" class="fa more" aria-hidden="true" (click)="toggleMoreDetails('nimbleways')"></i></div>
+      <div class="more-details" *ngIf="moreDetails.nimbleways" [@detailsState]>{{ 'experiences_nimbleways_more_details' |
+        translate }}</div>
+      <div class="technologies">{{ 'experiences_nimbleways_technologies' | translate }}</div>
+    </div>
+  </div>
+
+  <div class="experience">
+    <div class="experience-date">{{ 'experiences_adias_date' | translate }}</div>
+    <div class="experience-content">
+      <div class="experience-title"><i class="fa fa-star" aria-hidden="true"></i>{{ 'experiences_adias_title' | translate
+        }}
+      </div>
+      <div class="details"><i class="fa fa-check-circle" aria-hidden="true"></i>{{ 'experiences_adias_details' | translate
+        }}
+        <i [ngClass]="moreDetails.adias ? 'fa-caret-up':'fa-caret-down'" class="fa more" aria-hidden="true" (click)="toggleMoreDetails('adias')"></i>
+      </div>
+      <div class="more-details" *ngIf="moreDetails.adias" [@detailsState]>{{ 'experiences_adias_more_details' | translate
+        }}
+      </div>
+      <div class="technologies">{{ 'experiences_adias_technologies' | translate }}</div>
+    </div>
+  </div>
+
+  <div class="experience">
+    <div class="experience-date">{{ 'experiences_optimaco_date' | translate }}</div>
+    <div class="experience-content">
+      <div class="experience-title"><i class="fa fa-star" aria-hidden="true"></i>{{ 'experiences_optimaco_title' | translate
+        }}
+      </div>
+      <div class="details"><i class="fa fa-check-circle" aria-hidden="true"></i>{{ 'experiences_optimaco_details' | translate
+        }}
+        <i [ngClass]="moreDetails.optimaco ? 'fa-caret-up':'fa-caret-down'" class="fa more" aria-hidden="true" (click)="toggleMoreDetails('optimaco')"></i>
+      </div>
+      <div class="more-details" *ngIf="moreDetails.optimaco" [@detailsState]>{{ 'experiences_optimaco_more_details' | translate
+        }}
+      </div>
+      <div class="technologies">{{ 'experiences_optimaco_technologies' | translate }}</div>
+    </div>
+  </div>
+
+  <div class="experience">
+    <div class="experience-date">{{ 'experiences_twinprint_date' | translate }}</div>
+    <div class="experience-content">
+      <div class="experience-title"><i class="fa fa-star" aria-hidden="true"></i>{{ 'experiences_twinprint_title' | translate
+        }}
+      </div>
+      <div class="details"><i class="fa fa-check-circle" aria-hidden="true"></i>{{ 'experiences_twinprint_details' | translate
+        }}
+      </div>
+      <div class="technologies">{{ 'experiences_twinprint_technologies' | translate }}</div>
     </div>
   </div>
 </div>

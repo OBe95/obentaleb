@@ -2,18 +2,23 @@
   <particles [style]="style" [width]="width" [height]="height" [params]="params">
   </particles>
   <div class="row social">
-    <a href="https://goo.gl/avYZri" target="_blank" matTooltip="Profile LinkedIn" matTooltipPosition="below"><i class="fa fa-linkedin"
-        aria-hidden="true"></i></a>
+    <a href="https://goo.gl/avYZri" target="_blank" [matTooltip]="'about_linkedin' | translate" matTooltipPosition="below"><i
+        class="fa fa-linkedin" aria-hidden="true"></i></a>
+
+    <a href="#" *ngIf="translator.lang !== 'fr'" (click)="switchLang('fr')" class="lang" matTooltip="Français" matTooltipPosition="below">FR</a>
+    <a href="#" *ngIf="translator.lang !== 'en'" (click)="switchLang('en')" class="lang" matTooltip="English" matTooltipPosition="below">EN</a>
   </div>
 
   <div class="row intro m-0">
     <img class="photo" src="../../assets/images/Othmane_BENTALEB.jpg" alt="Othmane BENTALEB">
     <span class="name">Othmane BENTALEB</span>
-    <span>Ingénieur Informatique / Développeur Full-Stack</span>
+    <span>{{ 'about_status' | translate }}</span>
   </div>
 
   <div class="row info">
-    <div class="item text-lg-left p-0"><i class="fa fa-birthday-cake" aria-hidden="true"></i>17-03-1995</div>
+    <div class="item text-lg-left p-0"><i class="fa fa-birthday-cake" aria-hidden="true"></i>{{ 'about_birthday' | translate
+      }}
+    </div>
     <div class="item text-center"><i class="fa fa-envelope-o" aria-hidden="true"></i><a href="mailto:othmane.bentaleb.95@gmail.com">othmane.bentaleb.95@gmail.com</a></div>
     <div class="item text-lg-right p-0"><i class="fa fa-map-marker" aria-hidden="true"></i>Casablanca</div>
   </div>

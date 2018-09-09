@@ -1,15 +1,23 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule, APP_INITIALIZER } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatTooltipModule } from '@angular/material/tooltip';
+import { HttpClientModule } from '@angular/common/http';
+
+import { ParticlesModule } from 'angular-particle';
 
 import { AppComponent } from './app.component';
 import { AboutSideComponent } from './about-side/about-side.component';
-
-import { ParticlesModule } from 'angular-particle';
 import { FormationComponent } from './formation/formation.component';
 import { ExperiencesComponent } from './experiences/experiences.component';
 import { RealisationsComponent } from './realisations/realisations.component';
+
+import { TranslateService } from './services/translate.service';
+import { TranslatePipe } from './services/translate.pipe';
+
+export function setupTranslateFactory(translator: TranslateService): Function {
+  return () => translator.use('fr');
+}
 
 @NgModule({
   declarations: [
@@ -17,15 +25,25 @@ import { RealisationsComponent } from './realisations/realisations.component';
     AboutSideComponent,
     FormationComponent,
     ExperiencesComponent,
-    RealisationsComponent
+    RealisationsComponent,
+    TranslatePipe
   ],
   imports: [
     BrowserAnimationsModule,
     BrowserModule,
+    HttpClientModule,
     MatTooltipModule,
     ParticlesModule
   ],
-  providers: [],
+  providers: [
+    TranslateService,
+    {
+      provide: APP_INITIALIZER,
+      useFactory: setupTranslateFactory,
+      deps: [TranslateService],
+      multi: true
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
