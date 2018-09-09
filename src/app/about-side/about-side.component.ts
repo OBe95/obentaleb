@@ -1,9 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 
 @Component({
   selector: 'obe-about-side',
   templateUrl: './about-side.component.html',
-  styleUrls: ['./about-side.component.scss']
+  styleUrls: ['./about-side.component.scss'],
+  encapsulation: ViewEncapsulation.None
 })
 export class AboutSideComponent implements OnInit {
   style: object = {};

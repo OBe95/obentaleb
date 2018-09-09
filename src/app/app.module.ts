@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatTooltipModule } from '@angular/material/tooltip';
 
 import { AppComponent } from './app.component';
 import { AboutSideComponent } from './about-side/about-side.component';
@@ -21,6 +22,7 @@ import { RealisationsComponent } from './realisations/realisations.component';
   imports: [
     BrowserAnimationsModule,
     BrowserModule,
+    MatTooltipModule,
     ParticlesModule
   ],
   providers: [],
