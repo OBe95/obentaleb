@@ -72,6 +72,9 @@
 
         .more {
           padding-left: 5px;
+        }
+
+        &.has-more {
           cursor: pointer;
         }
       }

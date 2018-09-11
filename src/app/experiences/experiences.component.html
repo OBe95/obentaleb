@@ -26,7 +26,7 @@
     <div class="experience-content">
       <div class="experience-title"><i class="fa fa-star" aria-hidden="true"></i><span [innerHTML]="'experiences_nimbleways_title' | translate"></span>
       </div>
-      <div class="details" (click)="toggleMoreDetails('nimbleways')"><i class="fa fa-check-circle" aria-hidden="true"></i><span
+      <div class="details has-more" (click)="toggleMoreDetails('nimbleways')"><i class="fa fa-check-circle" aria-hidden="true"></i><span
           [innerHTML]="'experiences_nimbleways_details' | translate"></span>
         <i [ngClass]="moreDetails.nimbleways ? 'fa-caret-up':'fa-caret-down'" class="fa more" aria-hidden="true"></i></div>
       <div class="more-details" *ngIf="moreDetails.nimbleways" [@detailsState]><span [innerHTML]="'experiences_nimbleways_more_details' |
@@ -40,7 +40,7 @@
     <div class="experience-content">
       <div class="experience-title"><i class="fa fa-star" aria-hidden="true"></i><span [innerHTML]="'experiences_adias_title' | translate"></span>
       </div>
-      <div class="details" (click)="toggleMoreDetails('adias')"><i class="fa fa-check-circle" aria-hidden="true"></i><span
+      <div class="details has-more" (click)="toggleMoreDetails('adias')"><i class="fa fa-check-circle" aria-hidden="true"></i><span
           [innerHTML]="'experiences_adias_details' | translate"></span>
         <i [ngClass]="moreDetails.adias ? 'fa-caret-up':'fa-caret-down'" class="fa more" aria-hidden="true"></i>
       </div>
@@ -55,7 +55,7 @@
     <div class="experience-content">
       <div class="experience-title"><i class="fa fa-star" aria-hidden="true"></i><span [innerHTML]="'experiences_optimaco_title' | translate"></span>
       </div>
-      <div class="details" (click)="toggleMoreDetails('optimaco')"><i class="fa fa-check-circle" aria-hidden="true"></i><span
+      <div class="details has-more" (click)="toggleMoreDetails('optimaco')"><i class="fa fa-check-circle" aria-hidden="true"></i><span
           [innerHTML]="'experiences_optimaco_details' | translate"></span>
         <i [ngClass]="moreDetails.optimaco ? 'fa-caret-up':'fa-caret-down'" class="fa more" aria-hidden="true"></i>
       </div>
