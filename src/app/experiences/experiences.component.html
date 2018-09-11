@@ -1,88 +1,75 @@
 <div class="experiences">
-  <div class="title">{{ 'experiences_title' | translate }}</div>
+  <div class="title"><span [innerHTML]="'experiences_title' | translate"></span></div>
 
   <div class="experience">
-    <div class="experience-date">{{ 'experiences_saham_date' | translate }}</div>
+    <div class="experience-date"><span [innerHTML]="'experiences_saham_date' | translate"></span></div>
     <div class="experience-content">
-      <div class="experience-title"><i class="fa fa-star" aria-hidden="true"></i>{{ 'experiences_saham_title' | translate
-        }}
+      <div class="experience-title"><i class="fa fa-star" aria-hidden="true"></i><span [innerHTML]="'experiences_saham_title' | translate"></span>
       </div>
-      <div class="technologies">{{ 'experiences_saham_technologies' | translate }}</div>
+      <div class="technologies"><span [innerHTML]="'experiences_saham_technologies' | translate"></span></div>
     </div>
   </div>
 
   <div class="experience">
-    <div class="experience-date">{{ 'experiences_maltem_date' | translate }}</div>
+    <div class="experience-date"><span [innerHTML]="'experiences_maltem_date' | translate"></span></div>
     <div class="experience-content">
-      <div class="experience-title"><i class="fa fa-star" aria-hidden="true"></i>{{ 'experiences_maltem_title' | translate
-        }}
+      <div class="experience-title"><i class="fa fa-star" aria-hidden="true"></i><span [innerHTML]="'experiences_maltem_title' | translate"></span>
       </div>
-      <div class="details"><i class="fa fa-check-circle" aria-hidden="true"></i>{{ 'experiences_maltem_details' | translate
-        }}
+      <div class="details"><i class="fa fa-check-circle" aria-hidden="true"></i><span [innerHTML]="'experiences_maltem_details' | translate"></span>
       </div>
-      <div class="technologies">{{ 'experiences_maltem_technologies' | translate }}</div>
+      <div class="technologies"><span [innerHTML]="'experiences_maltem_technologies' | translate"></span></div>
     </div>
   </div>
 
   <div class="experience">
-    <div class="experience-date">{{ 'experiences_nimbleways_date' | translate }}</div>
+    <div class="experience-date"><span [innerHTML]="'experiences_nimbleways_date' | translate"></span></div>
     <div class="experience-content">
-      <div class="experience-title"><i class="fa fa-star" aria-hidden="true"></i>{{ 'experiences_nimbleways_title' | translate
-        }}
+      <div class="experience-title"><i class="fa fa-star" aria-hidden="true"></i><span [innerHTML]="'experiences_nimbleways_title' | translate"></span>
       </div>
-      <div class="details"><i class="fa fa-check-circle" aria-hidden="true"></i>{{ 'experiences_nimbleways_details' | translate
-        }}
+      <div class="details"><i class="fa fa-check-circle" aria-hidden="true"></i><span [innerHTML]="'experiences_nimbleways_details' | translate"></span>
         <i [ngClass]="moreDetails.nimbleways ? 'fa-caret-up':'fa-caret-down'" class="fa more" aria-hidden="true" (click)="toggleMoreDetails('nimbleways')"></i></div>
-      <div class="more-details" *ngIf="moreDetails.nimbleways" [@detailsState]>{{ 'experiences_nimbleways_more_details' |
-        translate }}</div>
-      <div class="technologies">{{ 'experiences_nimbleways_technologies' | translate }}</div>
+      <div class="more-details" *ngIf="moreDetails.nimbleways" [@detailsState]><span [innerHTML]="'experiences_nimbleways_more_details' |
+        translate"></span></div>
+      <div class="technologies"><span [innerHTML]="'experiences_nimbleways_technologies' | translate"></span></div>
     </div>
   </div>
 
   <div class="experience">
-    <div class="experience-date">{{ 'experiences_adias_date' | translate }}</div>
+    <div class="experience-date"><span [innerHTML]="'experiences_adias_date' | translate"></span></div>
     <div class="experience-content">
-      <div class="experience-title"><i class="fa fa-star" aria-hidden="true"></i>{{ 'experiences_adias_title' | translate
-        }}
+      <div class="experience-title"><i class="fa fa-star" aria-hidden="true"></i><span [innerHTML]="'experiences_adias_title' | translate"></span>
       </div>
-      <div class="details"><i class="fa fa-check-circle" aria-hidden="true"></i>{{ 'experiences_adias_details' | translate
-        }}
+      <div class="details"><i class="fa fa-check-circle" aria-hidden="true"></i><span [innerHTML]="'experiences_adias_details' | translate"></span>
         <i [ngClass]="moreDetails.adias ? 'fa-caret-up':'fa-caret-down'" class="fa more" aria-hidden="true" (click)="toggleMoreDetails('adias')"></i>
       </div>
-      <div class="more-details" *ngIf="moreDetails.adias" [@detailsState]>{{ 'experiences_adias_more_details' | translate
-        }}
+      <div class="more-details" *ngIf="moreDetails.adias" [@detailsState]><span [innerHTML]="'experiences_adias_more_details' | translate"></span>
       </div>
-      <div class="technologies">{{ 'experiences_adias_technologies' | translate }}</div>
+      <div class="technologies"><span [innerHTML]="'experiences_adias_technologies' | translate"></span></div>
     </div>
   </div>
 
   <div class="experience">
-    <div class="experience-date">{{ 'experiences_optimaco_date' | translate }}</div>
+    <div class="experience-date"><span [innerHTML]="'experiences_optimaco_date' | translate"></span></div>
     <div class="experience-content">
-      <div class="experience-title"><i class="fa fa-star" aria-hidden="true"></i>{{ 'experiences_optimaco_title' | translate
-        }}
+      <div class="experience-title"><i class="fa fa-star" aria-hidden="true"></i><span [innerHTML]="'experiences_optimaco_title' | translate"></span>
       </div>
-      <div class="details"><i class="fa fa-check-circle" aria-hidden="true"></i>{{ 'experiences_optimaco_details' | translate
-        }}
+      <div class="details"><i class="fa fa-check-circle" aria-hidden="true"></i><span [innerHTML]="'experiences_optimaco_details' | translate"></span>
         <i [ngClass]="moreDetails.optimaco ? 'fa-caret-up':'fa-caret-down'" class="fa more" aria-hidden="true" (click)="toggleMoreDetails('optimaco')"></i>
       </div>
-      <div class="more-details" *ngIf="moreDetails.optimaco" [@detailsState]>{{ 'experiences_optimaco_more_details' | translate
-        }}
+      <div class="more-details" *ngIf="moreDetails.optimaco" [@detailsState]><span [innerHTML]="'experiences_optimaco_more_details' | translate"></span>
       </div>
-      <div class="technologies">{{ 'experiences_optimaco_technologies' | translate }}</div>
+      <div class="technologies"><span [innerHTML]="'experiences_optimaco_technologies' | translate"></span></div>
     </div>
   </div>
 
   <div class="experience">
-    <div class="experience-date">{{ 'experiences_twinprint_date' | translate }}</div>
+    <div class="experience-date"><span [innerHTML]="'experiences_twinprint_date' | translate"></span></div>
     <div class="experience-content">
-      <div class="experience-title"><i class="fa fa-star" aria-hidden="true"></i>{{ 'experiences_twinprint_title' | translate
-        }}
+      <div class="experience-title"><i class="fa fa-star" aria-hidden="true"></i><span [innerHTML]="'experiences_twinprint_title' | translate"></span>
       </div>
-      <div class="details"><i class="fa fa-check-circle" aria-hidden="true"></i>{{ 'experiences_twinprint_details' | translate
-        }}
+      <div class="details"><i class="fa fa-check-circle" aria-hidden="true"></i><span [innerHTML]="'experiences_twinprint_details' | translate"></span>
       </div>
-      <div class="technologies">{{ 'experiences_twinprint_technologies' | translate }}</div>
+      <div class="technologies"><span [innerHTML]="'experiences_twinprint_technologies' | translate"></span></div>
     </div>
   </div>
 </div>

@@ -1,218 +1,207 @@
 <div class="realisations">
-  <div class="title">Réalisations</div>
+  <div class="title"><span [innerHTML]="'achievements_title' | translate"></span></div>
 
   <div class="realisation">
-    <div class="realisation-date">Février 2018</div>
+    <div class="realisation-date"><span [innerHTML]="'achievements_ehtpnetwork_date' | translate"></span></div>
     <div class="realisation-content">
       <div class="realisation-title">
-        <i class="fa fa-star" aria-hidden="true"></i>Réalisation d’une application web progressive</div>
-      <div class="details"><i class="fa fa-flask" aria-hidden="true"></i>EHTP Network - Un annuaire des étudiants / lauréats
-        de l'EHTP<i [ngClass]="moreDetails.ehtpnetwork ? 'fa-caret-up':'fa-caret-down'" class="fa more" aria-hidden="true"
-          (click)="toggleMoreDetails('ehtpnetwork')"></i></div>
-      <div class="more-details" *ngIf="moreDetails.ehtpnetwork" [@detailsState]>L'application permet un accès rapide, même
-        hors ligne, aux profils actualisés des étudiants / lauréats de l'EHTP, après inscription, une notification est envoyée
-        aux différents membres de sa promotion pour la validation du compte, une fois le compte atteint le nombre minimal
-        de validation requis, il aura accès aux différentes fonctionnalitées de l'application.
+        <i class="fa fa-star" aria-hidden="true"></i><span [innerHTML]="'achievements_ehtpnetwork_title' | translate"></span></div>
+      <div class="details"><i class="fa fa-flask" aria-hidden="true"></i><span [innerHTML]="'achievements_ehtpnetwork_details' | translate"></span>
+        <i [ngClass]="moreDetails.ehtpnetwork ? 'fa-caret-up':'fa-caret-down'" class="fa more" aria-hidden="true" (click)="toggleMoreDetails('ehtpnetwork')"></i></div>
+      <div class="more-details" *ngIf="moreDetails.ehtpnetwork" [@detailsState]><span [innerHTML]="'achievements_ehtpnetwork_more_details'
+        | translate"></span>
       </div>
-      <div class="technologies">WPA, Angular, Firebase, Firestore, Cloud Functions, Service Workers</div>
+      <div class="technologies"><span [innerHTML]="'achievements_ehtpnetwork_technologies' | translate"></span></div>
     </div>
   </div>
 
   <div class="realisation">
-    <div class="realisation-date">Mai 2017</div>
+    <div class="realisation-date"><span [innerHTML]="'achievements_may2017_date' | translate"></span></div>
     <div class="realisation-content">
       <div class="realisation-title">
-        <i class="fa fa-star" aria-hidden="true"></i>Participation à la compétition de programmation - CODE IT 2ème édition</div>
-      <div class="details"><i class="fa fa-flask" aria-hidden="true"></i>20,21/05/2017 - Equipe gagnante du 2ème prix de
-        la Deuxième Édition de la compétition CODE IT - Solve IT, Code IT à l'EHTP</div>
-      <div class="technologies">Competitive Programming, Java, Graph, Dynamic Programming</div>
+        <i class="fa fa-star" aria-hidden="true"></i><span [innerHTML]="'achievements_may2017_codeit2_title' | translate"></span></div>
+      <div class="details"><i class="fa fa-flask" aria-hidden="true"></i><span [innerHTML]="'achievements_may2017_codeit2_details' | translate"></span>
+      </div>
+      <div class="technologies"><span [innerHTML]="'achievements_may2017_codeit2_technologies' | translate"></span></div>
     </div>
 
     <div class="realisation-content">
       <div class="realisation-title">
-        <i class="fa fa-star" aria-hidden="true"></i>Participation à la compétition de programmation - JNJD 11ème édition</div>
-      <div class="details"><i class="fa fa-flask" aria-hidden="true"></i>13,14/05/2017 - Equipe gagnante du 3ème prix de
-        la Onzième Édition de la compétition des Journées Nationales des Jeunes Développeurs à l'INPT</div>
-      <div class="technologies">Competitive Programming, Java, Graph, Dynamic Programming</div>
+        <i class="fa fa-star" aria-hidden="true"></i><span [innerHTML]="'achievements_may2017_jnjd11_title' | translate"></span></div>
+      <div class="details"><i class="fa fa-flask" aria-hidden="true"></i><span [innerHTML]="'achievements_may2017_jnjd11_details' | translate"></span>
+      </div>
+      <div class="technologies"><span [innerHTML]="'achievements_may2017_jnjd11_technologies' | translate"></span></div>
     </div>
 
     <div class="realisation-content">
       <div class="realisation-title">
-        <i class="fa fa-star" aria-hidden="true"></i>Organisation de la compétition de programmation CODE IT v2.0</div>
-      <div class="details"><i class="fa fa-flask" aria-hidden="true"></i>Développement d'un site web du Hassania IT Club
-        pour l'organisation de la deuxième édition de CODE IT: www.hassaniait.com/codeit.</div>
-      <div class="technologies">Laravel, HTML/CSS, jQuery/Javascript (Bootstrap)</div>
+        <i class="fa fa-star" aria-hidden="true"></i><span [innerHTML]="'achievements_may2017_codeit2_org_title' | translate"></span></div>
+      <div class="details"><i class="fa fa-flask" aria-hidden="true"></i><span [innerHTML]="'achievements_may2017_codeit2_org_details' |
+        translate"></span></div>
+      <div class="technologies"><span [innerHTML]="'achievements_may2017_codeit2_org_technologies' | translate"></span></div>
     </div>
   </div>
 
   <div class="realisation">
-    <div class="realisation-date">Novembre 2016 - Janvier 2017</div>
+    <div class="realisation-date"><span [innerHTML]="'achievements_jiragateway_date' | translate"></span></div>
     <div class="realisation-content">
       <div class="realisation-title">
-        <i class="fa fa-star" aria-hidden="true"></i>Projet de développement - GFI</div>
-      <div class="details"><i class="fa fa-graduation-cap" aria-hidden="true"></i>Réalisation d'une passerelle entre JIRA
-        et Redmine<i [ngClass]="moreDetails.jiragateway ? 'fa-caret-up':'fa-caret-down'" class="fa more" aria-hidden="true"
+        <i class="fa fa-star" aria-hidden="true"></i><span [innerHTML]="'achievements_jiragateway_title' | translate"></span></div>
+      <div class="details"><i class="fa fa-graduation-cap" aria-hidden="true"></i><span [innerHTML]="'achievements_jiragateway_details' |
+        translate"></span><i [ngClass]="moreDetails.jiragateway ? 'fa-caret-up':'fa-caret-down'" class="fa more" aria-hidden="true"
           (click)="toggleMoreDetails('jiragateway')"></i></div>
-      <div class="more-details" *ngIf="moreDetails.jiragateway" [@detailsState]>En analysant les emails issus à chaque création
-        / mise à jour au niveau de l'un des outils de ticketing et en utilisant les API des deux outils, l'application assure
-        la synchronisation et la compatibilité des tickets crées par les clients et l'avancement fait au niveau de la GFI
-        et offre une interface web pour monitorer les logs des différentes tentatives de synchronisation.
+      <div class="more-details" *ngIf="moreDetails.jiragateway" [@detailsState]><span [innerHTML]="'achievements_jiragateway_more_details'
+        | translate"></span>
       </div>
-      <div class="technologies">JEE, Spring, JIRA REST API, Redmine REST API</div>
+      <div class="technologies"><span [innerHTML]="'achievements_jiragateway_technologies' | translate"></span></div>
     </div>
   </div>
 
   <div class="realisation">
-    <div class="realisation-date">Décembre 2016</div>
+    <div class="realisation-date"><span [innerHTML]="'achievements_capgeminicc_date' | translate"></span></div>
     <div class="realisation-content">
       <div class="realisation-title">
-        <i class="fa fa-star" aria-hidden="true"></i>Participation à Capgemini Coding Challenge - CCC 1ère édition</div>
-      <div class="details"><i class="fa fa-flask" aria-hidden="true"></i>Gagnant du 2ème prix de la compétition avec 180
-        finalistes qualifiés parmi 1455 participants de différentes universités nationales.
+        <i class="fa fa-star" aria-hidden="true"></i><span [innerHTML]="'achievements_capgeminicc_title' | translate"></span></div>
+      <div class="details"><i class="fa fa-flask" aria-hidden="true"></i><span [innerHTML]="'achievements_capgeminicc_details' | translate"></span>
       </div>
-      <div class="technologies">Competitive Programming, Java, Graph, Dynamic Programming</div>
+      <div class="technologies"><span [innerHTML]="'achievements_capgeminicc_technologies' | translate"></span></div>
     </div>
   </div>
 
   <div class="realisation">
-    <div class="realisation-date">Octobre 2016</div>
+    <div class="realisation-date"><span [innerHTML]="'achievements_mcpc2016_date' | translate"></span></div>
     <div class="realisation-content">
       <div class="realisation-title">
-        <i class="fa fa-star" aria-hidden="true"></i>Participation à Moroccan Collegiate Programming Contest - MCPC 2016</div>
-      <div class="details"><i class="fa fa-flask" aria-hidden="true"></i>Classée 4ème parmi 100 équipes participantes de
-        différentes universités nationales, notre équipe est qualifiée à l'Arab Collegiate Programming Contest (ACPC) à Sharam
-        EL Sheikh.
+        <i class="fa fa-star" aria-hidden="true"></i><span [innerHTML]="'achievements_mcpc2016_title' | translate"></span></div>
+      <div class="details"><i class="fa fa-flask" aria-hidden="true"></i><span [innerHTML]="'achievements_mcpc2016_details' | translate"></span>
       </div>
-      <div class="technologies">Competitive Programming, Java, Graph, Dynamic Programming</div>
+      <div class="technologies"><span [innerHTML]="'achievements_mcpc2016_technologies' | translate"></span></div>
     </div>
   </div>
 
   <div class="realisation">
-    <div class="realisation-date">Mars 2016 - Mai 2016</div>
+    <div class="realisation-date"><span [innerHTML]="'achievements_smartgm_date' | translate"></span></div>
     <div class="realisation-content">
       <div class="realisation-title">
-        <i class="fa fa-star" aria-hidden="true"></i>Projet Java-UML - CTM</div>
-      <div class="details"><i class="fa fa-graduation-cap" aria-hidden="true"></i>Réalisation d'une application mobile pour
-        l'atelier de la maintenance<i [ngClass]="moreDetails.smartgm ? 'fa-caret-up':'fa-caret-down'" class="fa more" aria-hidden="true"
-          (click)="toggleMoreDetails('smartgm')"></i></div>
-      <div class="more-details" *ngIf="moreDetails.smartgm" [@detailsState]>Le projet consiste à la numérisation de la fiche
-        suiveuse des autocars utilisée au sein de l'atelier de la maintenance de la CTM pour suivre l'avancement de la maintenance
-        de chacun des autocars.
+        <i class="fa fa-star" aria-hidden="true"></i><span [innerHTML]="'achievements_smartgm_title' | translate"></span></div>
+      <div class="details"><i class="fa fa-graduation-cap" aria-hidden="true"></i><span [innerHTML]="'achievements_smartgm_details' | translate"></span>
+        <i [ngClass]="moreDetails.smartgm ? 'fa-caret-up':'fa-caret-down'" class="fa more" aria-hidden="true" (click)="toggleMoreDetails('smartgm')"></i></div>
+      <div class="more-details" *ngIf="moreDetails.smartgm" [@detailsState]><span [innerHTML]="'achievements_smartgm_more_details' | translate"></span>
       </div>
-      <div class="technologies">SQL Server 2012, Ionic, NodeJS</div>
+      <div class="technologies"><span [innerHTML]="'achievements_smartgm_technologies' | translate"></span></div>
     </div>
   </div>
 
   <div class="realisation">
-    <div class="realisation-date">2015 - 2016</div>
+    <div class="realisation-date"><span [innerHTML]="'achievements_2015_2016_date' | translate"></span></div>
     <div class="realisation-content">
       <div class="realisation-title">
-        <i class="fa fa-star" aria-hidden="true"></i>Responsable de la cellule Communication et Médiatisation du Club Social
-        EHTP
+        <i class="fa fa-star" aria-hidden="true"></i><span [innerHTML]="'achievements_2015_2016_comm_cs_title' | translate"></span>
       </div>
     </div>
 
     <div class="realisation-content">
       <div class="realisation-title">
-        <i class="fa fa-star" aria-hidden="true"></i>Fondateur/Vice-Président du Club Hassania IT</div>
-      <div class="details"><i class="fa fa-flask" aria-hidden="true"></i>Organisation de la 1ère édition de la compétition
-        de programmation CODE/IT.</div>
-    </div>
-
-    <div class="realisation-content">
-      <div class="realisation-title">
-        <i class="fa fa-star" aria-hidden="true"></i>Membre de la cellule Design du Forum EHTP-Entreprises XIXème édition</div>
-      <div class="details"><i class="fa fa-flask" aria-hidden="true"></i>Développement d'un site web du Hassania IT Club
-        pour l'organisation de la deuxième édition de CODE IT: www.hassaniait.com/codeit.</div>
-    </div>
-
-    <div class="realisation-content">
-      <div class="realisation-title">
-        <i class="fa fa-star" aria-hidden="true"></i>Participation à la JNJD à l’INPT</div>
-      <div class="details"><i class="fa fa-flask" aria-hidden="true"></i>5ème place, Java</div>
-    </div>
-
-    <div class="realisation-content">
-      <div class="realisation-title">
-        <i class="fa fa-star" aria-hidden="true"></i>Projet Web</div>
-      <div class="details"><i class="fa fa-graduation-cap" aria-hidden="true"></i>Rénovation et restructuration du site web
-        de l'EHTP</div>
-      <div class="technologies">WordPress, HTML5, CSS3, JavaScript
+        <i class="fa fa-star" aria-hidden="true"></i><span [innerHTML]="'achievements_2015_2016_hitc_title' | translate"></span></div>
+      <div class="details"><i class="fa fa-flask" aria-hidden="true"></i><span [innerHTML]="'achievements_2015_2016_hitc_details' | translate"></span>
       </div>
     </div>
 
     <div class="realisation-content">
       <div class="realisation-title">
-        <i class="fa fa-star" aria-hidden="true"></i>Participation à Google Code Jam</div>
-      <div class="details"><i class="fa fa-flask" aria-hidden="true"></i>Qualification au Round1, Java</div>
+        <i class="fa fa-star" aria-hidden="true"></i><span [innerHTML]="'achievements_2015_2016_forum_title' | translate"></span></div>
+      <div class="details"><i class="fa fa-flask" aria-hidden="true"></i><span [innerHTML]="'achievements_2015_2016_forum_details' | translate"></span>
+      </div>
     </div>
 
     <div class="realisation-content">
       <div class="realisation-title">
-        <i class="fa fa-star" aria-hidden="true"></i>Projet Compilation</div>
-      <div class="details"><i class="fa fa-graduation-cap" aria-hidden="true"></i>Réalisation d'un compilateur (analyse lexicale,
-        syntaxique et sémantique) développé en C++
+        <i class="fa fa-star" aria-hidden="true"></i><span [innerHTML]="'achievements_2015_2016_jnjd10_title' | translate"></span></div>
+      <div class="details"><i class="fa fa-flask" aria-hidden="true"></i><span [innerHTML]="'achievements_2015_2016_jnjd10_details' | translate"></span>
+      </div>
+    </div>
+
+    <div class="realisation-content">
+      <div class="realisation-title">
+        <i class="fa fa-star" aria-hidden="true"></i><span [innerHTML]="'achievements_2015_2016_ehtpweb_title' | translate"></span></div>
+      <div class="details"><i class="fa fa-graduation-cap" aria-hidden="true"></i><span [innerHTML]="'achievements_2015_2016_ehtpweb_details'
+        | translate"></span></div>
+      <div class="technologies"><span [innerHTML]="'achievements_2015_2016_ehtpweb_technologies' | translate"></span>
+      </div>
+    </div>
+
+    <div class="realisation-content">
+      <div class="realisation-title">
+        <i class="fa fa-star" aria-hidden="true"></i><span [innerHTML]="'achievements_2015_2016_codejam_title' | translate"></span></div>
+      <div class="details"><i class="fa fa-flask" aria-hidden="true"></i><span [innerHTML]="'achievements_2015_2016_codejam_details' | translate"></span>
+      </div>
+    </div>
+
+    <div class="realisation-content">
+      <div class="realisation-title">
+        <i class="fa fa-star" aria-hidden="true"></i><span [innerHTML]="'achievements_2015_2016_compiler_title' | translate"></span></div>
+      <div class="details"><i class="fa fa-graduation-cap" aria-hidden="true"></i><span [innerHTML]="'achievements_2015_2016_compiler_details'
+        | translate"></span>
       </div>
     </div>
   </div>
 
   <div class="realisation">
-    <div class="realisation-date">2014 - 2015</div>
+    <div class="realisation-date"><span [innerHTML]="'achievements_2014_2015_date' | translate"></span></div>
     <div class="realisation-content">
       <div class="realisation-title">
-        <i class="fa fa-star" aria-hidden="true"></i>Membre du club social EHTP</div>
+        <i class="fa fa-star" aria-hidden="true"></i><span [innerHTML]="'achievements_2014_2015_cs_title' | translate"></span></div>
       <div class="details">
-        <i class="fa fa-flask" aria-hidden="true"></i>Réalisation des affiches, banderoles, flyers, rapports et réalisation
-        du site web socialehtp.com.</div>
+        <i class="fa fa-flask" aria-hidden="true"></i><span [innerHTML]="'achievements_2014_2015_cs_details' | translate"></span></div>
     </div>
 
     <div class="realisation-content">
       <div class="realisation-title">
-        <i class="fa fa-star" aria-hidden="true"></i>Evénement musical à l’EHTP</div>
-      <div class="details"><i class="fa fa-flask" aria-hidden="true"></i>Au sein d'un groupe de 8 élèves ingénieurs et grâce
-        à nos sponsors, nous avons mis en place une conférence, une exposition et un concert.</div>
+        <i class="fa fa-star" aria-hidden="true"></i><span [innerHTML]="'achievements_2014_2015_pip_title' | translate"></span></div>
+      <div class="details"><i class="fa fa-flask" aria-hidden="true"></i><span [innerHTML]="'achievements_2014_2015_pip_details' | translate"></span>
+      </div>
     </div>
 
     <div class="realisation-content">
       <div class="realisation-title">
-        <i class="fa fa-star" aria-hidden="true"></i>Participation à la JNJD à l’INPT</div>
-      <div class="details"><i class="fa fa-flask" aria-hidden="true"></i>13ème place, C</div>
+        <i class="fa fa-star" aria-hidden="true"></i><span [innerHTML]="'achievements_2014_2015_jnjd9_title' | translate"></span></div>
+      <div class="details"><i class="fa fa-flask" aria-hidden="true"></i><span [innerHTML]="'achievements_2014_2015_jnjd9_details' | translate"></span>
+      </div>
     </div>
 
     <div class="realisation-content">
       <div class="realisation-title">
-        <i class="fa fa-star" aria-hidden="true"></i>Participation à Google Code Jam</div>
-      <div class="details"><i class="fa fa-flask" aria-hidden="true"></i>Qualification au Round1, C</div>
+        <i class="fa fa-star" aria-hidden="true"></i><span [innerHTML]="'achievements_2014_2015_codejam_title' | translate"></span></div>
+      <div class="details"><i class="fa fa-flask" aria-hidden="true"></i><span [innerHTML]="'achievements_2014_2015_codejam_details' | translate"></span>
+      </div>
     </div>
 
     <div class="realisation-content">
       <div class="realisation-title">
-        <i class="fa fa-star" aria-hidden="true"></i>Projet C</div>
-      <div class="details"><i class="fa fa-graduation-cap" aria-hidden="true"></i>Réalisation d'un jeu vidéo 2D en langage
-        C avec la bibliothèque SDL.
+        <i class="fa fa-star" aria-hidden="true"></i><span [innerHTML]="'achievements_2014_2015_2dgame_title' | translate"></span></div>
+      <div class="details"><i class="fa fa-graduation-cap" aria-hidden="true"></i><span [innerHTML]="'achievements_2014_2015_2dgame_details'
+        | translate"></span>
       </div>
     </div>
   </div>
 
   <div class="realisation">
-    <div class="realisation-date">Réalisations antérieures</div>
+    <div class="realisation-date"><span [innerHTML]="'achievements_prev_date' | translate"></span></div>
     <div class="realisation-content">
       <div class="realisation-title">
-        <i class="fa fa-star" aria-hidden="true"></i>Gagnant du 1er prix de la compétition organisée à l'INPT aux élèves
-        des classes préparatoires</div>
+        <i class="fa fa-star" aria-hidden="true"></i><span [innerHTML]="'achievements_prev_inptprepa_title' | translate"></span></div>
     </div>
 
     <div class="realisation-content">
       <div class="realisation-title">
-        <i class="fa fa-star" aria-hidden="true"></i>Fondation et administration d’un forum VBulletin</div>
+        <i class="fa fa-star" aria-hidden="true"></i><span [innerHTML]="'achievements_prev_bloggerexp_title' | translate"></span></div>
       <div class="details">
-        <i class="fa fa-flask" aria-hidden="true"></i>Bloggerexp est un forum en arabe dédié aux utilisateurs de la plateforme
-        blogger offerte par Google.</div>
+        <i class="fa fa-flask" aria-hidden="true"></i><span [innerHTML]="'achievements_prev_bloggerexp_details' | translate"></span></div>
     </div>
 
     <div class="realisation-content">
       <div class="realisation-title">
-        <i class="fa fa-star" aria-hidden="true"></i>Services design et developpement sites web via la plateforme Khamsat</div>
+        <i class="fa fa-star" aria-hidden="true"></i><span [innerHTML]="'achievements_prev_khamsat_title' | translate"></span></div>
     </div>
   </div>
 </div>
