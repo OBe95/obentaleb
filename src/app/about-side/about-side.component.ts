@@ -13,7 +13,7 @@ export class AboutSideComponent implements OnInit {
   width: number = 100;
   height: number = 100;
 
-  constructor(private translator: TranslateService) { }
+  constructor(public translator: TranslateService) { }
 
   ngOnInit() {
     this.style = {

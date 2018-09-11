@@ -14,7 +14,7 @@ export class TranslateService {
     this.lang = lang;
 
     return new Promise<{}>((resolve, reject) => {
-      const langPath = `../../assets/i18n/${lang || 'fr'}.json`;
+      const langPath = `assets/i18n/${lang || 'fr'}.json`;
 
       this.http.get<{}>(langPath).subscribe(
         translation => {

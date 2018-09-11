@@ -6,8 +6,9 @@
     <div class="realisation-content">
       <div class="realisation-title">
         <i class="fa fa-star" aria-hidden="true"></i><span [innerHTML]="'achievements_ehtpnetwork_title' | translate"></span></div>
-      <div class="details"><i class="fa fa-flask" aria-hidden="true"></i><span [innerHTML]="'achievements_ehtpnetwork_details' | translate"></span>
-        <i [ngClass]="moreDetails.ehtpnetwork ? 'fa-caret-up':'fa-caret-down'" class="fa more" aria-hidden="true" (click)="toggleMoreDetails('ehtpnetwork')"></i></div>
+      <div class="details" (click)="toggleMoreDetails('ehtpnetwork')"><i class="fa fa-flask" aria-hidden="true"></i><span
+          [innerHTML]="'achievements_ehtpnetwork_details' | translate"></span>
+        <i [ngClass]="moreDetails.ehtpnetwork ? 'fa-caret-up':'fa-caret-down'" class="fa more" aria-hidden="true"></i></div>
       <div class="more-details" *ngIf="moreDetails.ehtpnetwork" [@detailsState]><span [innerHTML]="'achievements_ehtpnetwork_more_details'
         | translate"></span>
       </div>
@@ -47,9 +48,9 @@
     <div class="realisation-content">
       <div class="realisation-title">
         <i class="fa fa-star" aria-hidden="true"></i><span [innerHTML]="'achievements_jiragateway_title' | translate"></span></div>
-      <div class="details"><i class="fa fa-graduation-cap" aria-hidden="true"></i><span [innerHTML]="'achievements_jiragateway_details' |
-        translate"></span><i [ngClass]="moreDetails.jiragateway ? 'fa-caret-up':'fa-caret-down'" class="fa more" aria-hidden="true"
-          (click)="toggleMoreDetails('jiragateway')"></i></div>
+      <div class="details" (click)="toggleMoreDetails('jiragateway')"><i class="fa fa-graduation-cap" aria-hidden="true"></i><span
+          [innerHTML]="'achievements_jiragateway_details' |
+        translate"></span><i [ngClass]="moreDetails.jiragateway ? 'fa-caret-up':'fa-caret-down'" class="fa more" aria-hidden="true"></i></div>
       <div class="more-details" *ngIf="moreDetails.jiragateway" [@detailsState]><span [innerHTML]="'achievements_jiragateway_more_details'
         | translate"></span>
       </div>
@@ -84,8 +85,9 @@
     <div class="realisation-content">
       <div class="realisation-title">
         <i class="fa fa-star" aria-hidden="true"></i><span [innerHTML]="'achievements_smartgm_title' | translate"></span></div>
-      <div class="details"><i class="fa fa-graduation-cap" aria-hidden="true"></i><span [innerHTML]="'achievements_smartgm_details' | translate"></span>
-        <i [ngClass]="moreDetails.smartgm ? 'fa-caret-up':'fa-caret-down'" class="fa more" aria-hidden="true" (click)="toggleMoreDetails('smartgm')"></i></div>
+      <div class="details" (click)="toggleMoreDetails('smartgm')"><i class="fa fa-graduation-cap" aria-hidden="true"></i><span
+          [innerHTML]="'achievements_smartgm_details' | translate"></span>
+        <i [ngClass]="moreDetails.smartgm ? 'fa-caret-up':'fa-caret-down'" class="fa more" aria-hidden="true"></i></div>
       <div class="more-details" *ngIf="moreDetails.smartgm" [@detailsState]><span [innerHTML]="'achievements_smartgm_more_details' | translate"></span>
       </div>
       <div class="technologies"><span [innerHTML]="'achievements_smartgm_technologies' | translate"></span></div>
