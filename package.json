@@ -5,7 +5,7 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
-    "build:prod": "ng build --prod",
+    "build:prod": "ng build --base-href \"/\" --prod",
     "build:local": "ng build --base-href \"/obentaleb/\" --prod",
     "test": "ng test",
     "lint": "ng lint",

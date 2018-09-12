@@ -2,6 +2,21 @@
   <div class="title"><span [innerHTML]="'achievements_title' | translate"></span></div>
 
   <div class="realisation">
+    <div class="realisation-date"><span [innerHTML]="'achievements_obentalebdo_date' | translate"></span></div>
+    <div class="realisation-content">
+      <div class="realisation-title">
+        <i class="fa fa-star" aria-hidden="true"></i><span [innerHTML]="'achievements_obentalebdo_title' | translate"></span></div>
+      <div class="details has-more" (click)="toggleMoreDetails('obentalebdo')"><i class="fa fa-flask" aria-hidden="true"></i><span
+          [innerHTML]="'achievements_obentalebdo_details' | translate"></span>
+        <i [ngClass]="moreDetails.obentalebdo ? 'fa-caret-up':'fa-caret-down'" class="fa more" aria-hidden="true"></i></div>
+      <div class="more-details" *ngIf="moreDetails.obentalebdo" [@detailsState]><span [innerHTML]="'achievements_obentalebdo_more_details'
+          | translate"></span>
+      </div>
+      <div class="technologies"><span [innerHTML]="'achievements_obentalebdo_technologies' | translate"></span></div>
+    </div>
+  </div>
+
+  <div class="realisation">
     <div class="realisation-date"><span [innerHTML]="'achievements_ehtpnetwork_date' | translate"></span></div>
     <div class="realisation-content">
       <div class="realisation-title">
