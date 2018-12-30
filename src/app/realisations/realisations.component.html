@@ -1,224 +1,34 @@
 <div class="realisations">
   <div class="title"><span [innerHTML]="'achievements_title' | translate"></span></div>
 
-  <div class="realisation">
-    <div class="realisation-date"><span [innerHTML]="'achievements_obentalebdo_date' | translate"></span></div>
-    <div class="realisation-content">
+  <div class="realisation" *ngFor="let realisation of realisations">
+    <div class="realisation-date">
+      <span [innerHTML]="realisation.date | translate"></span>
+    </div>
+
+    <div class="realisation-content" *ngFor="let content of realisation.content">
       <div class="realisation-title">
-        <i class="fa fa-star" aria-hidden="true"></i><span [innerHTML]="'achievements_obentalebdo_title' | translate"></span></div>
-      <div class="details has-more" (click)="toggleMoreDetails('obentalebdo')"><i class="fa fa-flask" aria-hidden="true"></i><span
-          [innerHTML]="'achievements_obentalebdo_details' | translate"></span>
-        <i [ngClass]="moreDetails.obentalebdo ? 'fa-caret-up':'fa-caret-down'" class="fa more" aria-hidden="true"></i></div>
-      <div class="more-details" *ngIf="moreDetails.obentalebdo" [@detailsState]><span [innerHTML]="'achievements_obentalebdo_more_details'
-          | translate"></span>
+        <i class="fa fa-star" aria-hidden="true"></i>
+        <span [innerHTML]="content.title | translate"></span>
       </div>
-      <div class="technologies"><span [innerHTML]="'achievements_obentalebdo_technologies' | translate"></span></div>
-    </div>
-  </div>
 
-  <div class="realisation">
-    <div class="realisation-date"><span [innerHTML]="'achievements_ehtpnetwork_date' | translate"></span></div>
-    <div class="realisation-content">
-      <div class="realisation-title">
-        <i class="fa fa-star" aria-hidden="true"></i><span [innerHTML]="'achievements_ehtpnetwork_title' | translate"></span></div>
-      <div class="details has-more" (click)="toggleMoreDetails('ehtpnetwork')"><i class="fa fa-flask" aria-hidden="true"></i><span
-          [innerHTML]="'achievements_ehtpnetwork_details' | translate"></span>
-        <i [ngClass]="moreDetails.ehtpnetwork ? 'fa-caret-up':'fa-caret-down'" class="fa more" aria-hidden="true"></i></div>
-      <div class="more-details" *ngIf="moreDetails.ehtpnetwork" [@detailsState]><span [innerHTML]="'achievements_ehtpnetwork_more_details'
-        | translate"></span>
+      <div class="details has-more" (click)="toggleMoreDetails(content.id)" *ngIf="content.more">
+        <i [ngClass]="content.class" aria-hidden="true"></i>
+        <span [innerHTML]="content.details | translate"></span>
+        <i [ngClass]="moreDetails[content.id] ? 'fa-caret-up':'fa-caret-down'" class="fa more" aria-hidden="true"></i>
       </div>
-      <div class="technologies"><span [innerHTML]="'achievements_ehtpnetwork_technologies' | translate"></span></div>
-    </div>
-  </div>
-
-  <div class="realisation">
-    <div class="realisation-date"><span [innerHTML]="'achievements_may2017_date' | translate"></span></div>
-    <div class="realisation-content">
-      <div class="realisation-title">
-        <i class="fa fa-star" aria-hidden="true"></i><span [innerHTML]="'achievements_may2017_codeit2_title' | translate"></span></div>
-      <div class="details"><i class="fa fa-flask" aria-hidden="true"></i><span [innerHTML]="'achievements_may2017_codeit2_details' | translate"></span>
+      <div class="more-details" *ngIf="moreDetails[content.id]" [@detailsState]>
+        <span [innerHTML]="content.more | translate"></span>
       </div>
-      <div class="technologies"><span [innerHTML]="'achievements_may2017_codeit2_technologies' | translate"></span></div>
-    </div>
 
-    <div class="realisation-content">
-      <div class="realisation-title">
-        <i class="fa fa-star" aria-hidden="true"></i><span [innerHTML]="'achievements_may2017_jnjd11_title' | translate"></span></div>
-      <div class="details"><i class="fa fa-flask" aria-hidden="true"></i><span [innerHTML]="'achievements_may2017_jnjd11_details' | translate"></span>
+      <div class="details" *ngIf="!content.more && content.details">
+        <i [ngClass]="content.class" aria-hidden="true"></i>
+        <span [innerHTML]="content.details | translate"></span>
       </div>
-      <div class="technologies"><span [innerHTML]="'achievements_may2017_jnjd11_technologies' | translate"></span></div>
-    </div>
 
-    <div class="realisation-content">
-      <div class="realisation-title">
-        <i class="fa fa-star" aria-hidden="true"></i><span [innerHTML]="'achievements_may2017_codeit2_org_title' | translate"></span></div>
-      <div class="details"><i class="fa fa-flask" aria-hidden="true"></i><span [innerHTML]="'achievements_may2017_codeit2_org_details' |
-        translate"></span></div>
-      <div class="technologies"><span [innerHTML]="'achievements_may2017_codeit2_org_technologies' | translate"></span></div>
-    </div>
-  </div>
-
-  <div class="realisation">
-    <div class="realisation-date"><span [innerHTML]="'achievements_jiragateway_date' | translate"></span></div>
-    <div class="realisation-content">
-      <div class="realisation-title">
-        <i class="fa fa-star" aria-hidden="true"></i><span [innerHTML]="'achievements_jiragateway_title' | translate"></span></div>
-      <div class="details has-more" (click)="toggleMoreDetails('jiragateway')"><i class="fa fa-graduation-cap" aria-hidden="true"></i><span
-          [innerHTML]="'achievements_jiragateway_details' |
-        translate"></span><i [ngClass]="moreDetails.jiragateway ? 'fa-caret-up':'fa-caret-down'" class="fa more" aria-hidden="true"></i></div>
-      <div class="more-details" *ngIf="moreDetails.jiragateway" [@detailsState]><span [innerHTML]="'achievements_jiragateway_more_details'
-        | translate"></span>
+      <div class="technologies" *ngIf="content.technologies">
+        <span [innerHTML]="content.technologies | translate"></span>
       </div>
-      <div class="technologies"><span [innerHTML]="'achievements_jiragateway_technologies' | translate"></span></div>
-    </div>
-  </div>
-
-  <div class="realisation">
-    <div class="realisation-date"><span [innerHTML]="'achievements_capgeminicc_date' | translate"></span></div>
-    <div class="realisation-content">
-      <div class="realisation-title">
-        <i class="fa fa-star" aria-hidden="true"></i><span [innerHTML]="'achievements_capgeminicc_title' | translate"></span></div>
-      <div class="details"><i class="fa fa-flask" aria-hidden="true"></i><span [innerHTML]="'achievements_capgeminicc_details' | translate"></span>
-      </div>
-      <div class="technologies"><span [innerHTML]="'achievements_capgeminicc_technologies' | translate"></span></div>
-    </div>
-  </div>
-
-  <div class="realisation">
-    <div class="realisation-date"><span [innerHTML]="'achievements_mcpc2016_date' | translate"></span></div>
-    <div class="realisation-content">
-      <div class="realisation-title">
-        <i class="fa fa-star" aria-hidden="true"></i><span [innerHTML]="'achievements_mcpc2016_title' | translate"></span></div>
-      <div class="details"><i class="fa fa-flask" aria-hidden="true"></i><span [innerHTML]="'achievements_mcpc2016_details' | translate"></span>
-      </div>
-      <div class="technologies"><span [innerHTML]="'achievements_mcpc2016_technologies' | translate"></span></div>
-    </div>
-  </div>
-
-  <div class="realisation">
-    <div class="realisation-date"><span [innerHTML]="'achievements_smartgm_date' | translate"></span></div>
-    <div class="realisation-content">
-      <div class="realisation-title">
-        <i class="fa fa-star" aria-hidden="true"></i><span [innerHTML]="'achievements_smartgm_title' | translate"></span></div>
-      <div class="details has-more" (click)="toggleMoreDetails('smartgm')"><i class="fa fa-graduation-cap" aria-hidden="true"></i><span
-          [innerHTML]="'achievements_smartgm_details' | translate"></span>
-        <i [ngClass]="moreDetails.smartgm ? 'fa-caret-up':'fa-caret-down'" class="fa more" aria-hidden="true"></i></div>
-      <div class="more-details" *ngIf="moreDetails.smartgm" [@detailsState]><span [innerHTML]="'achievements_smartgm_more_details' | translate"></span>
-      </div>
-      <div class="technologies"><span [innerHTML]="'achievements_smartgm_technologies' | translate"></span></div>
-    </div>
-  </div>
-
-  <div class="realisation">
-    <div class="realisation-date"><span [innerHTML]="'achievements_2015_2016_date' | translate"></span></div>
-    <div class="realisation-content">
-      <div class="realisation-title">
-        <i class="fa fa-star" aria-hidden="true"></i><span [innerHTML]="'achievements_2015_2016_comm_cs_title' | translate"></span>
-      </div>
-    </div>
-
-    <div class="realisation-content">
-      <div class="realisation-title">
-        <i class="fa fa-star" aria-hidden="true"></i><span [innerHTML]="'achievements_2015_2016_hitc_title' | translate"></span></div>
-      <div class="details"><i class="fa fa-flask" aria-hidden="true"></i><span [innerHTML]="'achievements_2015_2016_hitc_details' | translate"></span>
-      </div>
-    </div>
-
-    <div class="realisation-content">
-      <div class="realisation-title">
-        <i class="fa fa-star" aria-hidden="true"></i><span [innerHTML]="'achievements_2015_2016_forum_title' | translate"></span></div>
-      <div class="details"><i class="fa fa-flask" aria-hidden="true"></i><span [innerHTML]="'achievements_2015_2016_forum_details' | translate"></span>
-      </div>
-    </div>
-
-    <div class="realisation-content">
-      <div class="realisation-title">
-        <i class="fa fa-star" aria-hidden="true"></i><span [innerHTML]="'achievements_2015_2016_jnjd10_title' | translate"></span></div>
-      <div class="details"><i class="fa fa-flask" aria-hidden="true"></i><span [innerHTML]="'achievements_2015_2016_jnjd10_details' | translate"></span>
-      </div>
-    </div>
-
-    <div class="realisation-content">
-      <div class="realisation-title">
-        <i class="fa fa-star" aria-hidden="true"></i><span [innerHTML]="'achievements_2015_2016_ehtpweb_title' | translate"></span></div>
-      <div class="details"><i class="fa fa-graduation-cap" aria-hidden="true"></i><span [innerHTML]="'achievements_2015_2016_ehtpweb_details'
-        | translate"></span></div>
-      <div class="technologies"><span [innerHTML]="'achievements_2015_2016_ehtpweb_technologies' | translate"></span>
-      </div>
-    </div>
-
-    <div class="realisation-content">
-      <div class="realisation-title">
-        <i class="fa fa-star" aria-hidden="true"></i><span [innerHTML]="'achievements_2015_2016_codejam_title' | translate"></span></div>
-      <div class="details"><i class="fa fa-flask" aria-hidden="true"></i><span [innerHTML]="'achievements_2015_2016_codejam_details' | translate"></span>
-      </div>
-    </div>
-
-    <div class="realisation-content">
-      <div class="realisation-title">
-        <i class="fa fa-star" aria-hidden="true"></i><span [innerHTML]="'achievements_2015_2016_compiler_title' | translate"></span></div>
-      <div class="details"><i class="fa fa-graduation-cap" aria-hidden="true"></i><span [innerHTML]="'achievements_2015_2016_compiler_details'
-        | translate"></span>
-      </div>
-    </div>
-  </div>
-
-  <div class="realisation">
-    <div class="realisation-date"><span [innerHTML]="'achievements_2014_2015_date' | translate"></span></div>
-    <div class="realisation-content">
-      <div class="realisation-title">
-        <i class="fa fa-star" aria-hidden="true"></i><span [innerHTML]="'achievements_2014_2015_cs_title' | translate"></span></div>
-      <div class="details">
-        <i class="fa fa-flask" aria-hidden="true"></i><span [innerHTML]="'achievements_2014_2015_cs_details' | translate"></span></div>
-    </div>
-
-    <div class="realisation-content">
-      <div class="realisation-title">
-        <i class="fa fa-star" aria-hidden="true"></i><span [innerHTML]="'achievements_2014_2015_pip_title' | translate"></span></div>
-      <div class="details"><i class="fa fa-flask" aria-hidden="true"></i><span [innerHTML]="'achievements_2014_2015_pip_details' | translate"></span>
-      </div>
-    </div>
-
-    <div class="realisation-content">
-      <div class="realisation-title">
-        <i class="fa fa-star" aria-hidden="true"></i><span [innerHTML]="'achievements_2014_2015_jnjd9_title' | translate"></span></div>
-      <div class="details"><i class="fa fa-flask" aria-hidden="true"></i><span [innerHTML]="'achievements_2014_2015_jnjd9_details' | translate"></span>
-      </div>
-    </div>
-
-    <div class="realisation-content">
-      <div class="realisation-title">
-        <i class="fa fa-star" aria-hidden="true"></i><span [innerHTML]="'achievements_2014_2015_codejam_title' | translate"></span></div>
-      <div class="details"><i class="fa fa-flask" aria-hidden="true"></i><span [innerHTML]="'achievements_2014_2015_codejam_details' | translate"></span>
-      </div>
-    </div>
-
-    <div class="realisation-content">
-      <div class="realisation-title">
-        <i class="fa fa-star" aria-hidden="true"></i><span [innerHTML]="'achievements_2014_2015_2dgame_title' | translate"></span></div>
-      <div class="details"><i class="fa fa-graduation-cap" aria-hidden="true"></i><span [innerHTML]="'achievements_2014_2015_2dgame_details'
-        | translate"></span>
-      </div>
-    </div>
-  </div>
-
-  <div class="realisation">
-    <div class="realisation-date"><span [innerHTML]="'achievements_prev_date' | translate"></span></div>
-    <div class="realisation-content">
-      <div class="realisation-title">
-        <i class="fa fa-star" aria-hidden="true"></i><span [innerHTML]="'achievements_prev_inptprepa_title' | translate"></span></div>
-    </div>
-
-    <div class="realisation-content">
-      <div class="realisation-title">
-        <i class="fa fa-star" aria-hidden="true"></i><span [innerHTML]="'achievements_prev_bloggerexp_title' | translate"></span></div>
-      <div class="details">
-        <i class="fa fa-flask" aria-hidden="true"></i><span [innerHTML]="'achievements_prev_bloggerexp_details' | translate"></span></div>
-    </div>
-
-    <div class="realisation-content">
-      <div class="realisation-title">
-        <i class="fa fa-star" aria-hidden="true"></i><span [innerHTML]="'achievements_prev_khamsat_title' | translate"></span></div>
     </div>
   </div>
 </div>

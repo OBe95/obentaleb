@@ -31,6 +31,73 @@ import {
 })
 export class ExperiencesComponent implements OnInit {
   moreDetails: { [id: string]: boolean; } = {};
+  experiences = [
+    {
+      date: 'experiences_saham_date',
+      content: [
+        {
+          title: 'experiences_saham_title',
+          technologies: 'experiences_saham_technologies'
+        }
+      ]
+    },
+    {
+      date: 'experiences_maltem_date',
+      content: [
+        {
+          title: 'experiences_maltem_title',
+          details: 'experiences_maltem_details',
+          technologies: 'experiences_maltem_technologies'
+        }
+      ]
+    },
+    {
+      date: 'experiences_nimbleways_date',
+      content: [
+        {
+          id: 'nimbleways',
+          title: 'experiences_nimbleways_title',
+          details: 'experiences_nimbleways_details',
+          more: 'experiences_nimbleways_more_details',
+          technologies: 'experiences_nimbleways_technologies'
+        }
+      ]
+    },
+    {
+      date: 'experiences_adias_date',
+      content: [
+        {
+          id: 'adias',
+          title: 'experiences_adias_title',
+          details: 'experiences_adias_details',
+          more: 'experiences_adias_more_details',
+          technologies: 'experiences_adias_technologies'
+        }
+      ]
+    },
+    {
+      date: 'experiences_optimaco_date',
+      content: [
+        {
+          id: 'optimaco',
+          title: 'experiences_optimaco_title',
+          details: 'experiences_optimaco_details',
+          more: 'experiences_optimaco_more_details',
+          technologies: 'experiences_optimaco_technologies'
+        }
+      ]
+    },
+    {
+      date: 'experiences_twinprint_date',
+      content: [
+        {
+          title: 'experiences_twinprint_title',
+          details: 'experiences_twinprint_details',
+          technologies: 'experiences_twinprint_technologies'
+        }
+      ]
+    }
+  ];
 
   constructor() {
   }

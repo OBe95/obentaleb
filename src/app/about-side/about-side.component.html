@@ -5,8 +5,9 @@
     <a href="https://goo.gl/avYZri" target="_blank" [matTooltip]="'about_linkedin' | translate" matTooltipPosition="below"><i
         class="fa fa-linkedin" aria-hidden="true"></i></a>
 
-    <a href="#" *ngIf="translator.lang !== 'fr'" (click)="switchLang('fr')" class="lang" matTooltip="Français" matTooltipPosition="below">FR</a>
-    <a href="#" *ngIf="translator.lang !== 'en'" (click)="switchLang('en')" class="lang" matTooltip="English" matTooltipPosition="below">EN</a>
+    <a *ngIf="translator.lang !== 'fr'" (click)="switchLang('fr')" class="lang" matTooltip="Français"
+      matTooltipPosition="below">FR</a>
+    <a *ngIf="translator.lang !== 'en'" (click)="switchLang('en')" class="lang" matTooltip="English" matTooltipPosition="below">EN</a>
   </div>
 
   <div class="row intro m-0">
@@ -16,8 +17,10 @@
   </div>
 
   <div class="row info">
-    <div class="item text-lg-left p-0"><i class="fa fa-birthday-cake" aria-hidden="true"></i><span [innerHTML]="
-        'about_birthday' | translate"></span> </div>
+    <div class="item text-lg-left p-0">
+      <i class="fa fa-birthday-cake" aria-hidden="true"></i>
+      <span [innerHTML]="'about_birthday' | translate"></span>
+    </div>
     <div class="item text-center"><i class="fa fa-envelope-o" aria-hidden="true"></i><a href="mailto:othmane.bentaleb.95@gmail.com">othmane.bentaleb.95@gmail.com</a></div>
     <div class="item text-lg-right p-0"><i class="fa fa-map-marker" aria-hidden="true"></i>Casablanca</div>
   </div>
