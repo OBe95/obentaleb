@@ -68,10 +68,13 @@
     z-index: 2;
 
     .photo {
-      width: 50%;
-      max-width: 350px;
-      border: 5px solid $secondary;
+      width: 50vw;
+      max-width: 300px;
+      height: 50vw;
+      max-height: 300px;
+      border: 2px solid $bg;
       border-radius: 100%;
+      box-shadow: 0 0 1px 4px $secondary;
     }
 
     .name {
@@ -130,6 +133,19 @@
         padding-right: 5px;
         margin-top: 5px;
       }
+    }
+  }
+}
+
+@media (max-height: 550px) {
+  .about-side {
+    .intro {
+      .photo {
+        width: 25vh;
+        max-width: 300px;
+        height: 25vh;
+        max-height: 300px;
+    }
     }
   }
 }

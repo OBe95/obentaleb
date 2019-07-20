@@ -33,10 +33,23 @@ export class ExperiencesComponent implements OnInit {
   moreDetails: { [id: string]: boolean; } = {};
   experiences = [
     {
+      date: 'experiences_altersolutions_date',
+      content: [
+        {
+          title: 'experiences_altersolutions_title',
+          details: 'experiences_altersolutions_details',
+          technologies: 'experiences_altersolutions_technologies'
+        }
+      ]
+    },
+    {
       date: 'experiences_saham_date',
       content: [
         {
+          id: 'saham',
           title: 'experiences_saham_title',
+          details: 'experiences_saham_details',
+          more: 'experiences_saham_more_details',
           technologies: 'experiences_saham_technologies'
         }
       ]
