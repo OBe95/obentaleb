@@ -14,7 +14,8 @@ export class TranslateService {
     this.lang = lang;
 
     return new Promise<{}>((resolve, reject) => {
-      const langPath = `assets/i18n/${lang || 'fr'}.json`;
+      const dateHour = new Date().toISOString().split(':')[0]; // Avoid caching more than 1h
+      const langPath = `assets/i18n/${lang || 'fr'}.json?date=${dateHour}`;
 
       this.http.get<{}>(langPath).subscribe(
         translation => {
