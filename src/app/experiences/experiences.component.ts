@@ -38,6 +38,7 @@ export class ExperiencesComponent implements OnInit {
         {
           title: 'experiences_altersolutions_title',
           details: 'experiences_altersolutions_details',
+          more: 'experiences_altersolutions_more_details',
           technologies: 'experiences_altersolutions_technologies'
         }
       ]
