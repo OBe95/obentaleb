@@ -36,6 +36,7 @@ export class ExperiencesComponent implements OnInit {
       date: 'experiences_altersolutions_date',
       content: [
         {
+          id: 'alter_solutions',
           title: 'experiences_altersolutions_title',
           details: 'experiences_altersolutions_details',
           more: 'experiences_altersolutions_more_details',
