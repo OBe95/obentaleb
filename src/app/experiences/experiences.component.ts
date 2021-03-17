@@ -33,6 +33,15 @@ export class ExperiencesComponent implements OnInit {
   moreDetails: { [id: string]: boolean; } = {};
   experiences = [
     {
+      date: 'experiences_contentsquare_date',
+      content: [
+        {
+          id: 'contentsquare',
+          title: 'experiences_contentsquare_title',
+        }
+      ]
+    },
+    {
       date: 'experiences_altersolutions_date',
       content: [
         {
