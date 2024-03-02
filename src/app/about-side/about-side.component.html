@@ -1,31 +1,33 @@
 <div class="about-side">
-  <particles [style]="style" [width]="width" [height]="height" [params]="params">
-  </particles>
-  <div class="row social">
-    <a href="https://goo.gl/avYZri" target="_blank" [matTooltip]="'about_linkedin' | translate"
-      matTooltipPosition="below"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
-
-    <span class="lang-wrapper">
-      <a (click)="switchLang('fr')" [ngClass]="{'lang': true, 'active': translator.lang === 'fr' }"
-        matTooltip="Français" matTooltipPosition="below">FR</a>
-      <a (click)="switchLang('en')" [ngClass]="{'lang': true, 'active': translator.lang === 'en' }" matTooltip="English"
-        matTooltipPosition="below">EN</a>
-    </span>
-  </div>
+  <ngx-particles id="particles" [options]="particlesOptions"></ngx-particles>
 
   <div class="row intro m-0">
-    <img class="photo" src="assets/images/Othmane_BENTALEB.jpg" alt="Othmane BENTALEB">
+    <img class="photo" src="assets/images/Othmane_BENTALEB.jpeg" alt="Othmane BENTALEB" />
     <span class="name">Othmane BENTALEB</span>
-    <span><span [innerHTML]="'about_status' | translate"></span></span>
+    <span>Software Engineer | <a href="https://www.codementor.io/@othmanebentaleb" target="_blank">
+        <span class="me-1">Codementor</span><i class="fa fa-external-link"></i>
+      </a>
+    </span>
+
+    <a class="scroll-down" aria-label="Scroll to Education section" href="#education">
+      <i class="fa fa-angle-double-down" aria-hidden="true"></i>
+    </a>
   </div>
 
   <div class="row info">
-    <div class="item text-lg-left p-0">
-      <i class="fa fa-birthday-cake" aria-hidden="true"></i>
-      <span [innerHTML]="'about_birthday' | translate"></span>
+    <div class="item">
+      <i class="fa fa-map-marker" aria-hidden="true"></i>
+      Paris
     </div>
-    <div class="item text-center"><i class="fa fa-envelope-o" aria-hidden="true"></i><a
-        href="mailto:othmane.bentaleb.95@gmail.com">othmane.bentaleb.95@gmail.com</a></div>
-    <div class="item text-lg-right p-0"><i class="fa fa-map-marker" aria-hidden="true"></i>Casablanca</div>
+
+    <a class="item" href="https://www.linkedin.com/in/othmane-bentaleb/" target="_blank">
+      <i class="fa fa-linkedin" aria-hidden="true"></i>
+      LinkedIn
+    </a>
+
+    <a class="item" href="https://github.com/OBe95" target="_blank">
+      <i class="fa fa-github" aria-hidden="true"></i>
+      Github
+    </a>
   </div>
 </div>

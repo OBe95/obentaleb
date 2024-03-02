@@ -1,5 +1,6 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
-import { TranslateService } from '../services/translate.service';
+import { IParticlesProps, NgParticlesService } from '@tsparticles/angular';
+import { loadSlim } from '@tsparticles/slim';
 
 @Component({
   selector: 'obe-about-side',
@@ -8,43 +9,40 @@ import { TranslateService } from '../services/translate.service';
   encapsulation: ViewEncapsulation.None
 })
 export class AboutSideComponent implements OnInit {
-  style: object = {};
-  params: object = {};
-  width: number = 100;
-  height: number = 100;
-
-  constructor(public translator: TranslateService) { }
-
-  ngOnInit() {
-    this.style = {
-      'position': 'absolute',
-      'width': '100%',
-      'height': '98%',
-      'z-index': 1,
-      'top': 0,
-      'left': 0,
-      'right': 0,
-      'bottom': 0,
-      'opacity': 0.4,
-    };
-
-    this.params = {
-      particles: {
-        number: {
-          value: 150,
-        },
-        color: {
-          value: '#D9B310'
-        },
-        shape: {
-          type: 'polygon',
-        },
+  particlesOptions: IParticlesProps = {
+    particles: {
+      number: {
+        value: 150
+      },
+      color: {
+        value: '#D9B310'
+      },
+      links: {
+        enable: true,
+        distance: 100
+      },
+      shape: {
+        type: 'circle'
+      },
+      move: {
+        enable: true,
+        speed: 1
+      },
+      poisson: {
+        enable: true
       }
-    };
-  }
+    },
+    fullScreen: {
+      enable: false,
+      zIndex: 0
+    }
+  };
 
-  switchLang(lang: string) {
-    this.translator.use(lang);
-  }
+  constructor(private readonly ngParticlesService: NgParticlesService) {}
 
+  ngOnInit(): void {
+    this.ngParticlesService.init(async (engine) => {
+      await loadSlim(engine);
+    });
+  }
 }

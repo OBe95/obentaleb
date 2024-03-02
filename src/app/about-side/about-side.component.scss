@@ -1,13 +1,5 @@
 @import '../../styles.scss';
 
-.mat-tooltip  {
-  color: $bg !important;
-  background-color: $secondary;
-  padding: 0;
-  margin: 2px 0 0 !important;
-  font-size: 12px;
-}
-
 .about-side {
   background-color: $bg;
   color: $bg-font;
@@ -18,44 +10,12 @@
   text-align: center;
   position: relative;
 
-  .social {
-    font-size: 16px;
-    position: absolute;
-    top: 0;
-    padding: 10px 0;
-    margin: 0 50px;
-    z-index: 2;
-    width: calc(100% - 100px);
+  a {
+    color: $bg-font;
+    text-decoration: none;
 
-    a {
-      color: $bg-font;
-      text-decoration: none;
-
-      &:hover {
-        color: $secondary;
-      }
-    }
-
-    .lang-wrapper {
-      position: absolute;
-      right: 0;
-      font-weight: 700;
-
-      .lang {
-        margin-left: 10px;
-        cursor: pointer;
-
-        &:first-child {
-          margin-left: 0;
-        }
-      }
-
-      .active {
-        background-color: $secondary;
-        color: $bg;
-        padding: 0 5px;
-        border-radius: 5px;
-      }
+    &:hover {
+      color: $secondary;
     }
   }
 
@@ -75,6 +35,7 @@
       border: 2px solid $bg;
       border-radius: 100%;
       box-shadow: 0 0 1px 4px $secondary;
+      padding: 0;
     }
 
     .name {
@@ -83,15 +44,15 @@
       color: $secondary;
       padding: 15px 0 0;
     }
-    
-    .name::before {
-      height: 2px;
-      background-color: $bg-font;
+
+    .scroll-down {
+      font-size: 24px;
+      display: none;
     }
   }
 
   .info {
-    font-size: 13px;
+    font-size: 14px;
     position: absolute;
     bottom: 0;
     padding: 10px 0;
@@ -107,11 +68,6 @@
       flex: 1;
       display: flex;
       flex-direction: column;
-    }
-
-    a, .item {
-      color: $bg-font;
-      text-decoration: none;
 
       &:hover {
         color: $secondary;
@@ -120,21 +76,15 @@
   }
 }
 
-@media (max-width: map-get($grid-breakpoints, lg)) {
-  .about-side {
-    .info {
-      flex-direction: column;
-
-      .item {
-        flex-direction: row;
-      }
-
-      .fa {
-        padding-right: 5px;
-        margin-top: 5px;
-      }
-    }
-  }
+#particles {
+  height: 100vh;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0;
+  padding: 0;
+  z-index: 0;
+  opacity: 0.2;
 }
 
 @media (max-height: 550px) {
@@ -145,7 +95,30 @@
         max-width: 300px;
         height: 25vh;
         max-height: 300px;
+      }
     }
+  }
+}
+
+@media (max-width: map-get($grid-breakpoints, md)) {
+  .about-side {
+    .intro {
+      .scroll-down {
+        display: block;
+        animation: bounce 2s linear infinite;
+      }
     }
+  }
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(10px);
+  }
+  100% {
+    transform: translateY(0);
   }
 }

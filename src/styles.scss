@@ -1,13 +1,8 @@
-/* You can add global styles to this file, and also import other style files */
-@import "~bootstrap/dist/css/bootstrap.css";
-@import "~font-awesome/css/font-awesome.css";
-@import "~@angular/material/prebuilt-themes/indigo-pink.css";
-
-$bg: #1D2731;
-$primary: #0B3C5D;
-$secondary: #D9B310;
-$primary-light: #328CC1;
-$bg-font: #EEEEEE;
+$bg: #1d2731;
+$primary: #0b3c5d;
+$secondary: #d9b310;
+$primary-light: #328cc1;
+$bg-font: #eeeeee;
 
 $grid-breakpoints: (
   xs: 0,
@@ -18,26 +13,50 @@ $grid-breakpoints: (
 );
 
 @font-face {
-    font-family: 'poppins';
-    src: url('/assets/fonts/poppins-regular.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
+  font-family: 'poppins';
+  src: url('/assets/fonts/poppins-regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
 }
 
 body {
-    font-weight: 400;
-    font-size: 15px;
-    line-height: 26px;
-    font-family: "poppins", sans-serif;
-    letter-spacing: 0px;
-    background-color: $bg-font;
-    color: $bg;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 26px;
+  font-family: 'poppins', sans-serif;
+  letter-spacing: 0px;
+  background-color: $bg-font;
+  color: $bg;
 }
 
 a {
-    color: $primary-light;
+  color: $primary-light;
 
-    &:hover {
-        color: $bg;
-    }
+  &:hover {
+    color: $bg;
+  }
+}
+
+.block-title {
+  background-color: $bg;
+  color: $secondary;
+  font-size: 18px;
+  text-transform: uppercase;
+  display: inline-block;
+  position: relative;
+  padding: 5px 30px 5px 60px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  margin-bottom: 15px;
+
+  &::before {
+    content: '';
+    height: 100%;
+    width: 5px;
+    background-color: $secondary;
+    left: 15px;
+    top: 0;
+    position: absolute;
+    border-right: 1px solid $bg-font;
+  }
 }

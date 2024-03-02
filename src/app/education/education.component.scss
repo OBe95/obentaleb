@@ -1,0 +1,45 @@
+@import '../../styles.scss';
+
+.education {
+  margin: 50px 0;
+
+  .timeline {
+    margin: 0 20px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &::before {
+      content: '';
+      height: 100%;
+      border-left: 1px solid $primary;
+      left: 50%;
+      top: 0;
+      position: absolute;
+      z-index: -1;
+      opacity: 0.4;
+    }
+
+    .timeline-date {
+      background-color: $primary;
+      border-radius: 100%;
+      width: 50px;
+      height: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: $bg-font;
+    }
+
+    .timeline-content {
+      margin: 20px 0;
+      padding: 5px 0;
+      background-color: $bg-font;
+      border-top: 1px solid transparentize($primary, 0.6);
+      border-bottom: 1px solid transparentize($primary, 0.6);
+      width: 70%;
+      text-align: center;
+    }
+  }
+}

@@ -3,30 +3,6 @@
 .experiences {
   margin: 50px 0 30px;
 
-  .title {
-    background-color: $bg;
-    color: $secondary;
-    font-size: 18px;
-    text-transform: uppercase;
-    display: inline-block;
-    position: relative;
-    padding: 5px 30px 5px 60px;
-    border-top-right-radius: 10px;
-    border-bottom-right-radius: 10px;
-    margin-bottom: 15px;
-
-    &:before {
-      content:"";
-      height: 100%;
-      width: 5px;
-      background-color: $secondary;
-      left: 15px;  
-      top: 0;
-      position: absolute;
-      border-right: 1px solid $bg-font;
-    }
-  }
-
   .experience {
     margin: 0 30px 20px;
     position: relative;
@@ -40,13 +16,21 @@
       display: inline-block;
       position: relative;
 
-      &:before {
-        content: "";
+      &::before {
+        content: '';
         border-top: 13px solid transparent;
         border-bottom: 13px solid transparent;
-        border-left: 13px solid  transparentize($primary-light, 0.5);
+        border-left: 13px solid transparentize($primary-light, 0.5);
         position: absolute;
         right: -13px;
+      }
+
+      &.secondary {
+        background-color: $secondary;
+
+        &::before {
+          border-left: 13px solid $secondary;
+        }
       }
     }
 
@@ -56,33 +40,27 @@
       .experience-title {
         color: $bg;
         font-weight: 600;
-
-        i {
-          padding-right: 5px;
-        }
       }
 
       .details {
         font-size: 14px;
         color: $primary;
+        line-height: 1.5;
 
-        i {
-          padding-right: 5px;
-        }
-
-        .more {
-          padding-left: 5px;
-        }
-
-        &.has-more {
-          cursor: pointer;
+        .btn {
+          font-size: 14px;
+          color: $primary;
+          text-align: left;
+          --bs-btn-padding-x: 0;
+          --bs-btn-padding-y: 0.25rem;
+          --bs-btn-line-height: 1.5;
+          --bs-border-width: 0;
         }
       }
 
       .more-details {
         font-size: 13px;
         background-color: transparentize($primary, 0.8);
-        text-align: justify;
         border-radius: 10px;
         padding: 10px 20px;
         margin-bottom: 10px;
