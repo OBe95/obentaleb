@@ -2,11 +2,26 @@ import { Experience } from '../models';
 
 export const EXPERIENCES: Experience[] = [
   {
-    date: 'January 2024 - Now',
+    date: 'January 2025 - Now',
+    contents: [
+      {
+        id: 'datadog',
+        title: `Software Engineer - Datadog, France`
+      }
+    ]
+  },
+  {
+    date: 'January 2024 - December 2024',
     contents: [
       {
         id: 'akur8',
-        title: 'Software Engineer - Akur8, France'
+        title: 'Software Engineer - Akur8, France',
+        details: 'Rate module - Gauss Design System',
+        more: `<ul class="ps-2 m-0">
+            <li>Akur8 Rate is a pricing module that allows insurers to design and analyze insurance rate plans based on actuarial portfolio data. To improve robustness to missing or inconsistent data, we introduced a values-mapping feature enabling users to map raw actuarial variables (categorical/ordinal) to standardized outputs, including the ability to define mappings for values not present in uploaded datasets.</li>
+            <li>Ensured the quality of Gauss <i>- Akur8's Design System -</i> developed by an external team, defining requirements and conducting pull-request reviews.</li>
+          </ul>`,
+        technologies: 'Angular, Java, NgRx, Tailwind, Playwright, Storybook, Github, Parquet'
       }
     ]
   },
